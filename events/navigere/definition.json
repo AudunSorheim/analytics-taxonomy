@@ -1,9 +1,0 @@
-{
-    "name": "navigere",
-    "standard": true,
-    "properties": [
-        "lenketekst",
-        "destinasjon"
-    ]
-  }
- 

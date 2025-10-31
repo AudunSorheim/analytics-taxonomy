@@ -1,9 +1,0 @@
-{
-  "name": "chat avsluttet",
-  "standard": true,
-  "properties": [
-    "komponent"
-  ],
-  "kommentar": "Brukeren avslutter chatten med oss"
-}
-

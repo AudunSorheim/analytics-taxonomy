@@ -1,8 +1,0 @@
-{
-    "name": "filtervalg",
-    "standard": true,
-    "properties": [
-      "kategori",
-      "filternavn"
-    ]
-  }  
