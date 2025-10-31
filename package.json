@@ -2,22 +2,34 @@
   "name": "@navikt/analytics-taxonomy",
   "version": "0.6.0",
   "description": "Analytics taxonomy for NAV applications",
-  "main": "dist/cjs/index.js",
-  "typings": "dist/cjs/index.d.ts",
-  "module": "dist/esm/index.js",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
   "scripts": {
-    "test": "jest",
-    "build-and-clean": "npm run build && npm run clean",
-    "build": "node src/cli/build.js && npm run tsc",
-    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && cp build/signature.txt dist",
-    "clean": "node src/cli/clean.js",
-    "publish-dry": "npm publish --dry-run",
-    "bump-version": "node src/cli/bump-version.js",
-    "download-dist": "node src/cli/download-dist.js"
+    "test": "jest --passWithNoTests",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:cjs-package",
+    "build:esm": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:cjs-package": "echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "prepublishOnly": "npm test && npm run build"
   },
   "files": [
     "dist",
-    "signature.txt"
+    "LICENSE",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
@@ -33,17 +45,13 @@
     "url": "https://github.com/navikt/analytics-taxonomy/issues"
   },
   "homepage": "https://github.com/navikt/analytics-taxonomy#readme",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {},
   "devDependencies": {
-    "@types/amplitude-js": "6.0.0",
-    "@types/npm": "latest",
-    "@types/typescript": "latest",
-    "camelcase": "^6.1.0",
-    "glob": "^7.1.6",
-    "global-npm": "^0.4.1",
-    "jest": "^26.5.3",
-    "tar": "^6.0.5",
-    "semver": "^7.3.2",
-    "typescript": "latest"
+    "jest": "^29.7.0",
+    "typescript": "^5.6.3"
   }
 }

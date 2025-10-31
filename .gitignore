@@ -1,31 +1,40 @@
-*.log
-*.out
-*.pid
-*.pid.lock
-*.seed
-*.tgz
-.env
-.eslintcache
-.grunt
-.idea
-.lock-wscript
-.next
-.node_repl_history
-.npm
-.nyc_output
-.yarn-integrity
-bower_components
-build/
-coverage
-dist/
-jspm_packages/
-lib-cov
-logs
+# Dependencies
 node_modules/
+
+# Build output
+dist/
+
+# Testing
+coverage/
+.nyc_output
+
+# Logs
+*.log
 npm-debug.log*
-pids
-tmp/
-typings/
 yarn-debug.log*
 yarn-error.log*
-signature.txt
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+*.tmp
+*.temp
+
+# Package manager
+.npm
+.yarn-integrity
+.pnp.*

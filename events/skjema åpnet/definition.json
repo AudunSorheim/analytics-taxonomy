@@ -1,8 +1,0 @@
-{
-    "name": "skjema åpnet",
-    "standard": true,
-    "properties": [
-      "skjemanavn",
-      "skjemaId"
-    ]
-  }  
