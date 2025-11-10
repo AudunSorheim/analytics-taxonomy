@@ -1,14 +1,14 @@
 /**
- * Skjema steg fullført event - triggers when a form step is completed
+ * Skjema steg fullført-hendelse - trigges når et steg i skjemaet fullføres
  */
 export const SKJEMA_STEG_FULLFORT_EVENT = 'skjema steg fullført' as const;
 
 export interface SkjemaStegFullfortProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
-  /** Step number or identifier */
+  /** Nummer eller id for steget */
   steg?: string;
 }
 

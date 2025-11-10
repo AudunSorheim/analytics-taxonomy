@@ -1,16 +1,16 @@
 /**
- * Skjema spørsmål besvart event - triggers when a form question is answered
+ * Skjema spørsmål besvart-hendelse - trigges når et spørsmål i skjemaet besvares
  */
 export const SKJEMA_SPORSMAL_BESVART_EVENT = 'skjema spørsmål besvart' as const;
 
 export interface SkjemaSporsmalBesvartProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
-  /** The question that was answered */
+  /** Spørsmålet som ble besvart */
   spørsmål?: string;
-  /** The answer provided */
+  /** Svaret som ble gitt */
   svar?: string;
 }
 

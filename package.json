@@ -3,27 +3,18 @@
   "version": "0.6.0",
   "description": "Analytics taxonomy for NAV applications",
   "type": "module",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
     }
   },
   "scripts": {
     "test": "jest --passWithNoTests",
-    "build": "npm run build:esm && npm run build:cjs && npm run build:cjs-package",
-    "build:esm": "tsc -p tsconfig.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:cjs-package": "echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "build": "tsc -p tsconfig.json",
     "prepublishOnly": "npm test && npm run build"
   },
   "files": [

@@ -33,7 +33,7 @@ analytics.logEvent(Events.NAVIGERE, properties);
 | accordion åpnet | `ACCORDION_APNET` | Bruker åpnet en accordion | `tekst` |
 | accordion lukket | `ACCORDION_LUKKET` | Bruker lukket en accordion | `tekst` |
 | alert vist | `ALERT_VIST` | Varsel/melding vist | `variant`, `tekst` |
-| besøk | `BESOK` | Sidevisning | – |
+| besøk | `BESOK` | Sidevisning | `url`, `sidetittel` |
 | chat startet | `CHAT_STARTET` | Bruker startet en chat-sesjon | `komponent` |
 | chat avsluttet | `CHAT_AVSLUTTET` | Bruker avsluttet en chat-sesjon | `komponent` |
 | filtervalg | `FILTERVALG` | Bruker anvendte filtre | `kategori`, `filternavn` |

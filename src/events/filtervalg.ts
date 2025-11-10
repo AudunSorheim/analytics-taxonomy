@@ -1,12 +1,12 @@
 /**
- * Filtervalg event - user selects a filter option
+ * Filtervalg-hendelse - trigges når en bruker velger et filter
  */
 export const FILTERVALG_EVENT = 'filtervalg' as const;
 
 export interface FiltervalgProperties {
-  /** Category of filter */
+  /** Kategori på filteret */
   kategori?: string;
-  /** Name of the filter selected */
+  /** Navnet på filteret som ble valgt */
   filternavn?: string;
 }
 

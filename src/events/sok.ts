@@ -1,14 +1,14 @@
 /**
- * Søk event - triggers when a user performs a search
+ * Søk-hendelse - trigges når en bruker gjennomfører et søk
  */
 export const SOK_EVENT = 'søk' as const;
 
 export interface SokProperties {
-  /** Where the search was performed */
+  /** Hvor søket ble utført */
   destinasjon?: string;
-  /** Search term entered by user */
+  /** Søkeordet brukeren skrev inn */
   søkeord?: string;
-  /** Component where search was performed */
+  /** Komponenten der søket ble utført */
   komponent?: string;
 }
 

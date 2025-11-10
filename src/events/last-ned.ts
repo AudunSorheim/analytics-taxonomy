@@ -1,14 +1,14 @@
 /**
- * Last ned event - user downloads a file
+ * Last ned-hendelse - trigges når en bruker laster ned en fil
  */
 export const LAST_NED_EVENT = 'last ned' as const;
 
 export interface LastNedProperties {
-  /** File type (e.g., PDF, Excel) */
+  /** Filtype (for eksempel PDF eller Excel) */
   type?: string;
-  /** Theme/category of the download */
+  /** Tema eller kategori for nedlastingen */
   tema?: string;
-  /** Title of the downloaded file */
+  /** Tittel på filen som ble lastet ned */
   tittel?: string;
 }
 

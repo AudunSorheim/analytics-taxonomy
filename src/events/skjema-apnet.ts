@@ -1,12 +1,12 @@
 /**
- * Skjema åpnet event - triggers when a form is opened
+ * Skjema åpnet-hendelse - trigges når et skjema åpnes
  */
 export const SKJEMA_APNET_EVENT = 'skjema åpnet' as const;
 
 export interface SkjemaApnetProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
 }
 

@@ -1,12 +1,12 @@
 /**
- * Guidepanel vist event - triggers when a guide panel is displayed
+ * Guidepanel vist-hendelse - trigges når et guidepanel vises
  */
 export const GUIDEPANEL_VIST_EVENT = 'guidepanel vist' as const;
 
 export interface GuidepanelVistProperties {
-  /** Text content of the guide panel */
+  /** Tekstinnholdet i guidepanelet */
   tekst?: string;
-  /** Component name */
+  /** Navn på komponenten */
   komponent?: string;
 }
 

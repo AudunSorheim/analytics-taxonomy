@@ -1,12 +1,12 @@
 /**
- * Skjema validering feilet event - triggers when form validation fails
+ * Skjema validering feilet-hendelse - trigges når skjemaet feiler i validering
  */
 export const SKJEMA_VALIDERING_FEILET_EVENT = 'skjema validering feilet' as const;
 
 export interface SkjemaValideringFeiletProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
 }
 

@@ -1,12 +1,12 @@
 /**
- * Navigere event - triggers when a user clicks a link
+ * Navigere-hendelse - trigges når en bruker klikker på en lenke
  */
 export const NAVIGERE_EVENT = 'navigere' as const;
 
 export interface NavigereProperties {
-  /** Text of the link that was clicked */
+  /** Teksten på lenken som ble klikket */
   lenketekst?: string;
-  /** Destination URL */
+  /** Måladressen (URL) */
   destinasjon?: string;
 }
 

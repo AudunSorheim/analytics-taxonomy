@@ -1,8 +1,8 @@
 /**
  * NAV Analytics Taxonomy
  *
- * Typsikre definisjoner for analysehendelser som brukes på tvers av NAV.
- * Kan kombineres med Umami eller `getAnalyticsInstance` fra @navikt/nav-dekoratoren-moduler.
+ * Typesikre definisjoner for analysehendelser som brukes på tvers av NAV.
+ * Kan logges til Umami direkte, eller via `getAnalyticsInstance` fra @navikt/nav-dekoratoren-moduler.
  *
  * @example
  * ```typescript
@@ -20,7 +20,7 @@
  * ```
  */
 
-// Export all event types and properties
+// Eksporterer alle event-typer og properties
 export * from './events/accordion-apnet';
 export * from './events/accordion-lukket';
 export * from './events/alert-vist';
@@ -42,7 +42,7 @@ export * from './events/skjema-steg-fullfort';
 export * from './events/skjema-validering-feilet';
 export * from './events/sok';
 
-// Import event names for centralized object
+// Importerer hendelsesnavn for samlet objekt
 import { ACCORDION_APNET_EVENT } from './events/accordion-apnet';
 import { ACCORDION_LUKKET_EVENT } from './events/accordion-lukket';
 import { ALERT_VIST_EVENT } from './events/alert-vist';
@@ -64,7 +64,7 @@ import { SKJEMA_STEG_FULLFORT_EVENT } from './events/skjema-steg-fullfort';
 import { SKJEMA_VALIDERING_FEILET_EVENT } from './events/skjema-validering-feilet';
 import { SOK_EVENT } from './events/sok';
 
-// Import event types for union
+// Importerer event-typer for union
 import type { AccordionApnetEvent } from './events/accordion-apnet';
 import type { AccordionLukketEvent } from './events/accordion-lukket';
 import type { AlertVistEvent } from './events/alert-vist';
@@ -87,7 +87,7 @@ import type { SkjemaValideringFeiletEvent } from './events/skjema-validering-fei
 import type { SokEvent } from './events/sok';
 
 /**
- * Samlet objekt med alle hendelsesnavn.
+ * Alle hendelsesnavn.
  * Bruk for enkel gjenfinning og autofullføring i applikasjoner.
  */
 export const Events = {

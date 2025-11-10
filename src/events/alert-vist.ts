@@ -1,12 +1,12 @@
 /**
- * Alert vist event - triggers when an alert is displayed
+ * Alert vist-hendelse - trigges når et varsel vises
  */
 export const ALERT_VIST_EVENT = 'alert vist' as const;
 
 export interface AlertVistProperties {
-  /** Type/variant of alert (e.g., success, warning, error) */
+  /** Variant av varselet (for eksempel success, warning, error) */
   variant?: string;
-  /** Text content of the alert */
+  /** Tekstinnholdet i varselet */
   tekst?: string;
 }
 

@@ -1,12 +1,12 @@
 /**
- * Skjema fullført event - triggers when a form is completed
+ * Skjema fullført-hendelse - trigges når et skjema sendes inn med suksess
  */
 export const SKJEMA_FULLFORT_EVENT = 'skjema fullført' as const;
 
 export interface SkjemaFullfortProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
 }
 

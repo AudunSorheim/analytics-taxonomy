@@ -1,10 +1,10 @@
 /**
- * Accordion åpnet event - triggers when an accordion is opened
+ * Accordion åpnet-hendelse - trigges når en accordion åpnes
  */
 export const ACCORDION_APNET_EVENT = 'accordion åpnet' as const;
 
 export interface AccordionApnetProperties {
-  /** Text content of the accordion */
+  /** Tekstinnholdet i accordionen */
   tekst?: string;
 }
 

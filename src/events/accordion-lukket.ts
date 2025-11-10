@@ -1,10 +1,10 @@
 /**
- * Accordion lukket event - triggers when an accordion is closed
+ * Accordion lukket-hendelse - trigges når en accordion lukkes
  */
 export const ACCORDION_LUKKET_EVENT = 'accordion lukket' as const;
 
 export interface AccordionLukketProperties {
-  /** Text content of the accordion */
+  /** Tekstinnholdet i accordionen */
   tekst?: string;
 }
 

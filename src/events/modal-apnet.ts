@@ -1,10 +1,10 @@
 /**
- * Modal åpnet event - triggers when a modal is opened
+ * Modal åpnet-hendelse - trigges når en modal åpnes
  */
 export const MODAL_APNET_EVENT = 'modal åpnet' as const;
 
 export interface ModalApnetProperties {
-  /** Text content or title of the modal */
+  /** Tekstinnhold eller tittel på modalen */
   tekst?: string;
 }
 

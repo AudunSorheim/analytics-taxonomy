@@ -1,12 +1,12 @@
 /**
- * Skjema startet event - triggers when a form is started
+ * Skjema startet-hendelse - trigges når en bruker begynner på et skjema
  */
 export const SKJEMA_STARTET_EVENT = 'skjema startet' as const;
 
 export interface SkjemaStartetProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
 }
 

@@ -1,10 +1,10 @@
 /**
- * Chat avsluttet event - user ends a chat session
+ * Chat avsluttet-hendelse - trigges når en bruker avslutter en chat
  */
 export const CHAT_AVSLUTTET_EVENT = 'chat avsluttet' as const;
 
 export interface ChatAvsluttetProperties {
-  /** Component where chat was closed */
+  /** Komponenten der chatten ble avsluttet */
   komponent?: string;
 }
 

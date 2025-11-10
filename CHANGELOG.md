@@ -7,3 +7,5 @@ Hold denne filen oppdatert for hver utgivelse. Samle endringer per versjon og be
 - Nytt: Taksonomien er skrevet om til rene TypeScript-typer for gjenbruk i NAVs løsninger.
 - Dokumentasjon: README er oversatt til norsk og utvidet med type-sikre eksempler.
 - Vedlikehold: Lisensen er justert til MIT og npm-oppsettet er ryddet.
+- Bygg: Pakken distribueres nå kun som ESM; CommonJS-utgaven er fjernet.
+- Endring: `besøk`-hendelsen støtter nå `url` og `sidetittel` som properties.

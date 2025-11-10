@@ -1,12 +1,12 @@
 /**
- * Skjema innsending feilet event - triggers when form submission fails
+ * Skjema innsending feilet-hendelse - trigges når innsending av skjema feiler
  */
 export const SKJEMA_INNSENDING_FEILET_EVENT = 'skjema innsending feilet' as const;
 
 export interface SkjemaInnsendingFeiletProperties {
-  /** Form name */
+  /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unique form identifier */
+  /** Unik identifikator for skjemaet */
   skjemaId?: string;
 }
 
