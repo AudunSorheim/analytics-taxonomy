@@ -1,7 +1,7 @@
 # NAV Analytics Taxonomy
 
 
-TypeScript type-definisjoner for analytics-hendelser brukt på tvers av Nav sine digitale tjenester. Logg direkte til Umami, eller via `getAnalyticsInstance` fra `@navikt/nav-dekoratoren-moduler`.
+Type-definisjoner for analytics-hendelser brukt på tvers av Nav sine digitale tjenester. Logg direkte til Umami, eller via `getAnalyticsInstance` fra `@navikt/nav-dekoratoren-moduler`.
 
 
 ## Installasjon
@@ -18,7 +18,6 @@ import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 
 const analytics = getAnalyticsInstance();
 
-// Full type-sikkerhet og autofullføring
 const properties: NavigereProperties = {
   lenketekst: 'Les mer',
   destinasjon: '/side/info'
@@ -97,7 +96,6 @@ logTaxonomyEventWithExtra(Events.SOK, {
 // Kjøretidsvalidering
 const eventName = getUserInput();
 if (isValidEventName(eventName)) {
-  // eventName er nå typed som EventName
   console.log('Gyldig hendelse:', eventName);
 }
 ```
@@ -113,13 +111,13 @@ Denne taksonomien sikrer konsistent analytics på tvers av NAVs applikasjoner ve
 - **Gjenbrukbarhet** - Team kan dele hendelsesdefinisjoner på tvers av tjenester
 - **Personvernoverensstemmelse** - Kun godkjente, ikke-sensitive properties
 
-Navngivningen følger NAVs [designsystem (Aksel)](https://aksel.nav.no/designsystem) for å spore komponentbruk.
+Navngivningen følger Nav sitt [designsystem (Aksel)](https://aksel.nav.no/designsystem) for å spore komponentbruk.
 
 ### Legge til nye hendelser
 
 **Før du foreslår en ny hendelse:**
 - Vurder: Hvilket problem løser dette?
-- Spør: Vil dette hjelpe team å forstå brukeratferd eller måle selvbetjening?
+- Spør: Vil dette hjelpe team å forstå brukeradferd eller måle selvbetjening?
 - Sjekk: Finnes det allerede en lignende hendelse?
 
 **Navnekonvensjoner:**
