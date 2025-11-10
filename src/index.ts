@@ -1,22 +1,21 @@
 /**
  * NAV Analytics Taxonomy
- * 
- * Type-safe definitions for analytics events used across NAV applications.
- * Use with analytics implementations like Umami or via getAnalyticsInstance
- * from @navikt/nav-dekoratoren-moduler.
- * 
+ *
+ * Typsikre definisjoner for analysehendelser som brukes på tvers av NAV.
+ * Kan kombineres med Umami eller `getAnalyticsInstance` fra @navikt/nav-dekoratoren-moduler.
+ *
  * @example
  * ```typescript
  * import { Events, type NavigereProperties } from '@navikt/analytics-taxonomy';
  * import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
- * 
+ *
  * const analytics = getAnalyticsInstance();
- * 
+ *
  * const properties: NavigereProperties = {
  *   lenketekst: 'Les mer',
  *   destinasjon: '/side/info'
  * };
- * 
+ *
  * analytics.logEvent(Events.NAVIGERE, properties);
  * ```
  */
@@ -88,60 +87,60 @@ import type { SkjemaValideringFeiletEvent } from './events/skjema-validering-fei
 import type { SokEvent } from './events/sok';
 
 /**
- * Centralized object containing all event names.
- * Use this for easy discovery and autocomplete of available events.
+ * Samlet objekt med alle hendelsesnavn.
+ * Bruk for enkel gjenfinning og autofullføring i applikasjoner.
  */
 export const Events = {
-  /** Accordion opened */
+  /** Accordion åpnet */
   ACCORDION_APNET: ACCORDION_APNET_EVENT,
-  /** Accordion closed */
+  /** Accordion lukket */
   ACCORDION_LUKKET: ACCORDION_LUKKET_EVENT,
-  /** Alert displayed */
+  /** Varsel vist */
   ALERT_VIST: ALERT_VIST_EVENT,
-  /** Page visit */
+  /** Sidebesøk */
   BESOK: BESOK_EVENT,
-  /** Chat session ended */
+  /** Chat avsluttet */
   CHAT_AVSLUTTET: CHAT_AVSLUTTET_EVENT,
-  /** Chat session started */
+  /** Chat startet */
   CHAT_STARTET: CHAT_STARTET_EVENT,
-  /** Filter selected */
+  /** Filtervalg */
   FILTERVALG: FILTERVALG_EVENT,
-  /** Guide panel displayed */
+  /** Guidepanel vist */
   GUIDEPANEL_VIST: GUIDEPANEL_VIST_EVENT,
-  /** File downloaded */
+  /** Nedlasting */
   LAST_NED: LAST_NED_EVENT,
-  /** Modal opened */
+  /** Modal åpnet */
   MODAL_APNET: MODAL_APNET_EVENT,
-  /** Modal closed */
+  /** Modal lukket */
   MODAL_LUKKET: MODAL_LUKKET_EVENT,
-  /** Navigation/link clicked */
+  /** Navigasjon / lenke-klikk */
   NAVIGERE: NAVIGERE_EVENT,
-  /** Form opened */
+  /** Skjema åpnet */
   SKJEMA_APNET: SKJEMA_APNET_EVENT,
-  /** Form completed */
+  /** Skjema fullført */
   SKJEMA_FULLFORT: SKJEMA_FULLFORT_EVENT,
-  /** Form submission failed */
+  /** Skjema-innsending feilet */
   SKJEMA_INNSENDING_FEILET: SKJEMA_INNSENDING_FEILET_EVENT,
-  /** Form question answered */
+  /** Skjema-spørsmål besvart */
   SKJEMA_SPORSMAL_BESVART: SKJEMA_SPORSMAL_BESVART_EVENT,
-  /** Form started */
+  /** Skjema startet */
   SKJEMA_STARTET: SKJEMA_STARTET_EVENT,
-  /** Form step completed */
+  /** Skjema-steg fullført */
   SKJEMA_STEG_FULLFORT: SKJEMA_STEG_FULLFORT_EVENT,
-  /** Form validation failed */
+  /** Skjema-validering feilet */
   SKJEMA_VALIDERING_FEILET: SKJEMA_VALIDERING_FEILET_EVENT,
-  /** Search performed */
+  /** Søk utført */
   SOK: SOK_EVENT,
 } as const;
 
 /**
- * Union type of all valid event names
+ * Union-type for alle gyldige hendelsesnavn.
  */
 export type EventName = typeof Events[keyof typeof Events];
 
 /**
- * Union type of all event objects (name + properties)
- * Useful for creating type-safe logging wrappers
+ * Union-type for alle hendelser (navn + properties).
+ * Nyttig når man lager egne, typesikre wrapper-funksjoner.
  */
 export type TaxonomyEvent =
   | AccordionApnetEvent
@@ -166,12 +165,12 @@ export type TaxonomyEvent =
   | SokEvent;
 
 /**
- * Helper type to extract properties type from an event name
+ * Hjelpetype for å hente property-typene basert på hendelsesnavn.
  */
 export type PropertiesFor<T extends EventName> = Extract<TaxonomyEvent, { name: T }>['properties'];
 
 /**
- * Type guard to check if an event name is valid
+ * Type-guard som bekrefter at et navn er en gyldig hendelse i taksonomien.
  */
 export function isValidEventName(name: string): name is EventName {
   return Object.values(Events).includes(name as EventName);

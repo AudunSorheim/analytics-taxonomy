@@ -1,7 +1,7 @@
 # NAV Analytics Taxonomy
 
 
-TypeScript type-definisjoner for standardiserte analytics-hendelser brukt på tvers av NAVs digitale tjenester. Bruk med Umami eller via `getAnalyticsInstance` fra `@navikt/nav-dekoratoren-moduler`.
+TypeScript type-definisjoner for analytics-hendelser brukt på tvers av Nav sine digitale tjenester. Logg direkte til Umami, eller via `getAnalyticsInstance` fra `@navikt/nav-dekoratoren-moduler`.
 
 
 ## Installasjon
@@ -19,36 +19,38 @@ import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 const analytics = getAnalyticsInstance();
 
 // Full type-sikkerhet og autofullføring
-analytics.logEvent(Events.NAVIGERE, {
+const properties: NavigereProperties = {
   lenketekst: 'Les mer',
   destinasjon: '/side/info'
-});
+};
+
+analytics.logEvent(Events.NAVIGERE, properties);
 ```
 
 ## Tilgjengelige hendelser
 
-| Hendelse | Konstant | Beskrivelse |
-|----------|----------|-------------|
-| accordion åpnet | `ACCORDION_APNET` | Bruker åpnet en accordion |
-| accordion lukket | `ACCORDION_LUKKET` | Bruker lukket en accordion |
-| alert vist | `ALERT_VIST` | Varsel/melding vist |
-| besøk | `BESOK` | Sidevisning |
-| chat startet | `CHAT_STARTET` | Bruker startet en chat-sesjon |
-| chat avsluttet | `CHAT_AVSLUTTET` | Bruker avsluttet en chat-sesjon |
-| filtervalg | `FILTERVALG` | Bruker anvendte filtre |
-| guidepanel vist | `GUIDEPANEL_VIST` | Guidepanel vist |
-| last ned | `LAST_NED` | Bruker lastet ned en fil |
-| modal åpnet | `MODAL_APNET` | Modal-dialog åpnet |
-| modal lukket | `MODAL_LUKKET` | Modal-dialog lukket |
-| navigere | `NAVIGERE` | Bruker klikket på en lenke |
-| skjema åpnet | `SKJEMA_APNET` | Skjema åpnet |
-| skjema startet | `SKJEMA_STARTET` | Bruker begynte å fylle ut skjema |
-| skjema spørsmål besvart | `SKJEMA_SPORSMAL_BESVART` | Skjemaspørsmål besvart |
-| skjema steg fullført | `SKJEMA_STEG_FULLFORT` | Skjemasteg fullført |
-| skjema validering feilet | `SKJEMA_VALIDERING_FEILET` | Skjemavalidering feilet |
-| skjema innsending feilet | `SKJEMA_INNSENDING_FEILET` | Skjemainnsending feilet |
-| skjema fullført | `SKJEMA_FULLFORT` | Skjema fullført |
-| søk | `SOK` | Bruker utførte et søk |
+| Hendelse | Konstant | Beskrivelse | Properties |
+|----------|----------|-------------|------------|
+| accordion åpnet | `ACCORDION_APNET` | Bruker åpnet en accordion | `tekst` |
+| accordion lukket | `ACCORDION_LUKKET` | Bruker lukket en accordion | `tekst` |
+| alert vist | `ALERT_VIST` | Varsel/melding vist | `variant`, `tekst` |
+| besøk | `BESOK` | Sidevisning | – |
+| chat startet | `CHAT_STARTET` | Bruker startet en chat-sesjon | `komponent` |
+| chat avsluttet | `CHAT_AVSLUTTET` | Bruker avsluttet en chat-sesjon | `komponent` |
+| filtervalg | `FILTERVALG` | Bruker anvendte filtre | `kategori`, `filternavn` |
+| guidepanel vist | `GUIDEPANEL_VIST` | Guidepanel vist | `tekst`, `komponent` |
+| last ned | `LAST_NED` | Bruker lastet ned en fil | `type`, `tema`, `tittel` |
+| modal åpnet | `MODAL_APNET` | Modal-dialog åpnet | `tekst` |
+| modal lukket | `MODAL_LUKKET` | Modal-dialog lukket | `tekst` |
+| navigere | `NAVIGERE` | Bruker klikket på en lenke | `lenketekst`, `destinasjon` |
+| skjema åpnet | `SKJEMA_APNET` | Skjema åpnet | `skjemanavn`, `skjemaId` |
+| skjema startet | `SKJEMA_STARTET` | Bruker begynte å fylle ut skjema | `skjemanavn`, `skjemaId` |
+| skjema spørsmål besvart | `SKJEMA_SPORSMAL_BESVART` | Skjemaspørsmål besvart | `skjemanavn`, `skjemaId`, `spørsmål`, `svar` |
+| skjema steg fullført | `SKJEMA_STEG_FULLFORT` | Skjemasteg fullført | `skjemanavn`, `skjemaId`, `steg` |
+| skjema validering feilet | `SKJEMA_VALIDERING_FEILET` | Skjemavalidering feilet | `skjemanavn`, `skjemaId` |
+| skjema innsending feilet | `SKJEMA_INNSENDING_FEILET` | Skjemainnsending feilet | `skjemanavn`, `skjemaId` |
+| skjema fullført | `SKJEMA_FULLFORT` | Skjema fullført | `skjemanavn`, `skjemaId` |
+| søk | `SOK` | Bruker utførte et søk | `destinasjon`, `søkeord`, `komponent` |
 
 ## Avansert bruk
 
@@ -57,24 +59,39 @@ analytics.logEvent(Events.NAVIGERE, {
 ```typescript
 import {
   Events,
-  type TaxonomyEvent,
   type EventName,
   type PropertiesFor,
   isValidEventName
 } from '@navikt/analytics-taxonomy';
 
-// Generisk loggingfunksjon med full type-sikkerhet
-function logEvent<T extends EventName>(
+const analytics = getAnalyticsInstance();
+
+// 1) Streng type-sikkerhet – kun taksonomiens properties
+function logTaxonomyEvent<T extends EventName>(
   name: T,
-  properties?: PropertiesFor<T>
+  properties: PropertiesFor<T>
 ) {
-  getAnalyticsInstance().logEvent(name, properties);
+  analytics.logEvent(name, properties);
 }
 
-// TypeScript sikrer korrekte properties for hver hendelse
-logEvent(Events.NAVIGERE, {
-  lenketekst: 'Klikk her',
-  destinasjon: '/dokumenter'
+logTaxonomyEvent(Events.NAVIGERE, {
+  lenketekst: 'Gå til innsending',
+  destinasjon: '/skjema/innsending'
+});
+
+// 2) Utvid med egne felter (Record<string, unknown>)
+function logTaxonomyEventWithExtra<T extends EventName, Extra extends Record<string, unknown>>(
+  name: T,
+  properties: PropertiesFor<T> & Extra
+) {
+  analytics.logEvent(name, properties);
+}
+
+logTaxonomyEventWithExtra(Events.SOK, {
+  søkeord: 'økonomi',
+  destinasjon: '/artikler/sok',
+  komponent: 'globalt-søk',
+  kilde: 'intern' // Eget ekstra felt
 });
 
 // Kjøretidsvalidering
@@ -185,13 +202,14 @@ Pakken publiseres automatisk til npm når endringer merges til `main`.
 **Slik publiserer du en ny versjon:**
 
 1. Gjør endringene dine
-2. Oppdater versjon i `package.json`:
+2. Oppdater `CHANGELOG.md` med en kort, tydelig oppsummering av endringene.
+3. Oppdater versjon i `package.json`:
    ```bash
    npm version patch  # Bugfikser, dokumentasjon
    npm version minor  # Nye hendelser eller properties (ikke-breaking)
    npm version major  # Breaking changes (fjerne/endre typer)
    ```
-3. Push med tags:
+4. Push med tags:
    ```bash
    git push && git push --tags
    ```
