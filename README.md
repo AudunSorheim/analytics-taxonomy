@@ -102,11 +102,6 @@ logWithExtra({
     kilde: 'intern'
   }
 });
-
-const eventName = getUserInput();
-if (isValidEventName(eventName)) {
-  console.log('Gyldig hendelse:', eventName);
-}
 ```
 
 ## For bidragsytere
