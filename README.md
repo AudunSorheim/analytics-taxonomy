@@ -53,47 +53,56 @@ analytics.logEvent(Events.NAVIGERE, properties);
 
 ## Avansert bruk
 
-### Type-sikker hendelseshåndtering
+### Lag din egen log-funksjon med `TaxonomyEvent`
+
+```typescript
+import { Events, type TaxonomyEvent } from '@navikt/analytics-taxonomy';
+import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
+
+const analytics = getAnalyticsInstance();
+
+function logTaxonomyEvent(event: TaxonomyEvent) {
+  analytics.logEvent(event.name, event.properties);
+}
+
+logTaxonomyEvent({
+  name: Events.NAVIGERE,
+  properties: {
+    lenketekst: 'Gå til innsending',
+    destinasjon: '/skjema/innsending'
+  }
+});
+```
+
+### Dersom du ønsker å legge til dine egne properties i tillegg:
 
 ```typescript
 import {
   Events,
-  type EventName,
-  type PropertiesFor,
+  type TaxonomyEvent,
   isValidEventName
 } from '@navikt/analytics-taxonomy';
 
 const analytics = getAnalyticsInstance();
 
-// 1) Streng type-sikkerhet – kun taksonomiens properties
-function logTaxonomyEvent<T extends EventName>(
-  name: T,
-  properties: PropertiesFor<T>
-) {
-  analytics.logEvent(name, properties);
+type TaxonomyEventWithExtra = TaxonomyEvent & {
+  properties?: TaxonomyEvent['properties'] & Record<string, unknown>;
+};
+
+function logWithExtra(event: TaxonomyEventWithExtra) {
+  analytics.logEvent(event.name, event.properties);
 }
 
-logTaxonomyEvent(Events.NAVIGERE, {
-  lenketekst: 'Gå til innsending',
-  destinasjon: '/skjema/innsending'
+logWithExtra({
+  name: Events.SOK,
+  properties: {
+    søkeord: 'økonomi',
+    destinasjon: '/artikler/sok',
+    komponent: 'globalt-søk',
+    kilde: 'intern'
+  }
 });
 
-// 2) Utvid med egne felter (Record<string, unknown>)
-function logTaxonomyEventWithExtra<T extends EventName, Extra extends Record<string, unknown>>(
-  name: T,
-  properties: PropertiesFor<T> & Extra
-) {
-  analytics.logEvent(name, properties);
-}
-
-logTaxonomyEventWithExtra(Events.SOK, {
-  søkeord: 'økonomi',
-  destinasjon: '/artikler/sok',
-  komponent: 'globalt-søk',
-  kilde: 'intern' // Eget ekstra felt
-});
-
-// Kjøretidsvalidering
 const eventName = getUserInput();
 if (isValidEventName(eventName)) {
   console.log('Gyldig hendelse:', eventName);
