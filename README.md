@@ -26,6 +26,59 @@ const properties: NavigereProperties = {
 analytics.logEvent(Events.NAVIGERE, properties);
 ```
 
+## Avansert bruk
+
+### Lag din egen log-funksjon med `TaxonomyEvent`
+
+```typescript
+import { Events, type TaxonomyEvent } from '@navikt/analytics-taxonomy';
+import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
+
+const analytics = getAnalyticsInstance();
+
+function logTaxonomyEvent(event: TaxonomyEvent) {
+  analytics.logEvent(event.name, event.properties);
+}
+
+logTaxonomyEvent({
+  name: Events.NAVIGERE,
+  properties: {
+    lenketekst: 'Gå til innsending',
+    destinasjon: '/skjema/innsending'
+  }
+});
+```
+
+### Dersom du ønsker å legge til dine egne properties i tillegg:
+
+```typescript
+import {
+  Events,
+  type TaxonomyEvent,
+  isValidEventName
+} from '@navikt/analytics-taxonomy';
+
+const analytics = getAnalyticsInstance();
+
+type TaxonomyEventWithExtra = TaxonomyEvent & {
+  properties?: TaxonomyEvent['properties'] & Record<string, unknown>;
+};
+
+function logWithExtra(event: TaxonomyEventWithExtra) {
+  analytics.logEvent(event.name, event.properties);
+}
+
+logWithExtra({
+  name: Events.SOK,
+  properties: {
+    søkeord: 'økonomi',
+    destinasjon: '/artikler/sok',
+    komponent: 'globalt-søk',
+    kilde: 'intern'
+  }
+});
+```
+
 ## Tilgjengelige hendelser
 
 ### Aksel-komponenter
@@ -242,59 +295,6 @@ analytics.logEvent(Events.NAVIGERE, properties);
 | skjema validering feilet | `SKJEMA_VALIDERING_FEILET` | Skjemavalidering feilet | `skjemanavn`, `skjemaId` |
 | skjema innsending feilet | `SKJEMA_INNSENDING_FEILET` | Skjemainnsending feilet | `skjemanavn`, `skjemaId` |
 | skjema fullført | `SKJEMA_FULLFORT` | Skjema fullført | `skjemanavn`, `skjemaId` |
-
-## Avansert bruk
-
-### Lag din egen log-funksjon med `TaxonomyEvent`
-
-```typescript
-import { Events, type TaxonomyEvent } from '@navikt/analytics-taxonomy';
-import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
-
-const analytics = getAnalyticsInstance();
-
-function logTaxonomyEvent(event: TaxonomyEvent) {
-  analytics.logEvent(event.name, event.properties);
-}
-
-logTaxonomyEvent({
-  name: Events.NAVIGERE,
-  properties: {
-    lenketekst: 'Gå til innsending',
-    destinasjon: '/skjema/innsending'
-  }
-});
-```
-
-### Dersom du ønsker å legge til dine egne properties i tillegg:
-
-```typescript
-import {
-  Events,
-  type TaxonomyEvent,
-  isValidEventName
-} from '@navikt/analytics-taxonomy';
-
-const analytics = getAnalyticsInstance();
-
-type TaxonomyEventWithExtra = TaxonomyEvent & {
-  properties?: TaxonomyEvent['properties'] & Record<string, unknown>;
-};
-
-function logWithExtra(event: TaxonomyEventWithExtra) {
-  analytics.logEvent(event.name, event.properties);
-}
-
-logWithExtra({
-  name: Events.SOK,
-  properties: {
-    søkeord: 'økonomi',
-    destinasjon: '/artikler/sok',
-    komponent: 'globalt-søk',
-    kilde: 'intern'
-  }
-});
-```
 
 ## For bidragsytere
 
