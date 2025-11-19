@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
     "build": "tsc -p tsconfig.json",
     "prepublishOnly": "npm test && npm run build"
   },
@@ -41,6 +41,7 @@
     "npm": ">=9.0.0"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "jest": "^29.7.0",
     "typescript": "^5.6.3"
   }

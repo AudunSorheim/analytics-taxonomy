@@ -4,8 +4,8 @@
 export const ALERT_VIST_EVENT = 'alert vist' as const;
 
 export interface AlertVistProperties {
-  /** Variant av varselet (for eksempel success, warning, error) */
-  variant?: string;
+  /** Variant av varselet */
+  variant?: 'error' | 'warning' | 'info' | 'success';
   /** Tekstinnholdet i varselet */
   tekst?: string;
 }

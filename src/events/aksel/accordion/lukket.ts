@@ -4,8 +4,10 @@
 export const ACCORDION_LUKKET_EVENT = 'accordion lukket' as const;
 
 export interface AccordionLukketProperties {
-  /** Tekstinnholdet i accordionen */
-  tekst?: string;
+  /** Unik id for komponenten */
+  komponentId?: string;
+  /** Tittelen til accordionen */
+  tittel?: string;
 }
 
 export type AccordionLukketEvent = {

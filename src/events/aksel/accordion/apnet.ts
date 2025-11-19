@@ -4,8 +4,10 @@
 export const ACCORDION_APNET_EVENT = 'accordion åpnet' as const;
 
 export interface AccordionApnetProperties {
-  /** Tekstinnholdet i accordionen */
-  tekst?: string;
+  /** Unik id for komponenten */
+  komponentId?: string;
+  /** Tittelen til accordionen */
+  tittel?: string;
 }
 
 export type AccordionApnetEvent = {
