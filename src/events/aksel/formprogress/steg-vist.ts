@@ -5,18 +5,18 @@ export const FORMPROGRESS_STEG_VIST_EVENT = 'formprogress steg vist' as const;
 
 export interface FormProgressStegVistProperties {
   /** Id eller referanse til skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
   /** Nummer på aktivt steg (1-indeksert) */
-  aktivtSteg?: number;
+  aktivtSteg: number;
   /** Label/navn på aktivt steg */
   stegNavn?: string;
   /** Totalt antall steg */
-  totaltAntallSteg?: number;
+  totaltAntallSteg: number;
   /** Om steget er interaktivt (kan klikkes) */
   erInteraktivt?: boolean;
 }
 
 export type FormProgressStegVistEvent = {
   name: typeof FORMPROGRESS_STEG_VIST_EVENT;
-  properties?: FormProgressStegVistProperties;
+  properties: FormProgressStegVistProperties;
 };

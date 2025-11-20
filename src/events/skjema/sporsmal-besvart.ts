@@ -7,7 +7,7 @@ export interface SkjemaSporsmalBesvartProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
   /** Unik identifikator for skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
   /** Spørsmålet som ble besvart */
   spørsmål?: string;
   /** Svaret som ble gitt */
@@ -16,5 +16,5 @@ export interface SkjemaSporsmalBesvartProperties {
 
 export type SkjemaSporsmalBesvartEvent = {
   name: typeof SKJEMA_SPORSMAL_BESVART_EVENT;
-  properties?: SkjemaSporsmalBesvartProperties;
+  properties: SkjemaSporsmalBesvartProperties;
 };

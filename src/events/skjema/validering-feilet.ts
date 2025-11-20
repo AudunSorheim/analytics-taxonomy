@@ -7,10 +7,10 @@ export interface SkjemaValideringFeiletProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
   /** Unik identifikator for skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
 }
 
 export type SkjemaValideringFeiletEvent = {
   name: typeof SKJEMA_VALIDERING_FEILET_EVENT;
-  properties?: SkjemaValideringFeiletProperties;
+  properties: SkjemaValideringFeiletProperties;
 };

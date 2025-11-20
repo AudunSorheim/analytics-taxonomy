@@ -7,10 +7,10 @@ export interface SkjemaFullfortProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
   /** Unik identifikator for skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
 }
 
 export type SkjemaFullfortEvent = {
   name: typeof SKJEMA_FULLFORT_EVENT;
-  properties?: SkjemaFullfortProperties;
+  properties: SkjemaFullfortProperties;
 };

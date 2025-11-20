@@ -7,10 +7,10 @@ export interface SkjemaInnsendingFeiletProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
   /** Unik identifikator for skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
 }
 
 export type SkjemaInnsendingFeiletEvent = {
   name: typeof SKJEMA_INNSENDING_FEILET_EVENT;
-  properties?: SkjemaInnsendingFeiletProperties;
+  properties: SkjemaInnsendingFeiletProperties;
 };

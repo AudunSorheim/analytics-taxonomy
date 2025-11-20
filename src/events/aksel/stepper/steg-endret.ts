@@ -5,22 +5,22 @@ export const STEPPER_STEG_ENDRET_EVENT = 'stepper steg endret' as const;
 
 export interface StepperStegEndretProperties {
   /** Id eller navn på stepperen */
-  komponentId?: string;
+  komponentId: string;
   /** Steget det navigeres til */
   stegId?: string;
   /** 0-indeksert posisjon for steget */
-  stegIndeks?: number;
+  stegIndeks: number;
   /** Handlingstype (neste, forrige, hopp) */
   handling?: 'neste' | 'forrige' | 'hopp';
   /** Navigasjonsretning */
-  retning?: 'fremover' | 'bakover';
+  retning: 'fremover' | 'bakover';
   /** Totalt antall steg */
-  totaltAntallSteg?: number;
+  totaltAntallSteg: number;
   /** Om steget som forlates var fullført */
   forrigeStegFullfort?: boolean;
 }
 
 export type StepperStegEndretEvent = {
   name: typeof STEPPER_STEG_ENDRET_EVENT;
-  properties?: StepperStegEndretProperties;
+  properties: StepperStegEndretProperties;
 };

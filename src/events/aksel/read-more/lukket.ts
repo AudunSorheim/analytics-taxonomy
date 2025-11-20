@@ -7,10 +7,10 @@ export interface LesMerLukketProperties {
   /** Identifikator for komponenten */
   lesMerId?: string;
   /** Tittelen til seksjonen */
-  tittel?: string;
+  tittel: string;
 }
 
 export type LesMerLukketEvent = {
   name: typeof LES_MER_LUKKET_EVENT;
-  properties?: LesMerLukketProperties;
+  properties: LesMerLukketProperties;
 };

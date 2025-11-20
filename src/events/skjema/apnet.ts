@@ -7,10 +7,10 @@ export interface SkjemaApnetProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
   /** Unik identifikator for skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
 }
 
 export type SkjemaApnetEvent = {
   name: typeof SKJEMA_APNET_EVENT;
-  properties?: SkjemaApnetProperties;
+  properties: SkjemaApnetProperties;
 };

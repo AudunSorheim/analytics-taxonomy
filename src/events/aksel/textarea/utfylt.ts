@@ -5,7 +5,7 @@ export const TEXTAREA_UTFYLT_EVENT = 'textarea utfylt' as const;
 
 export interface TextareaUtfyltProperties {
   /** Id til tekstområdet */
-  feltId?: string;
+  feltId: string;
   /** Navnet eller labelen til feltet */
   feltNavn?: string;
   /** Om feltet inneholder tekst etter endringen */
@@ -16,5 +16,5 @@ export interface TextareaUtfyltProperties {
 
 export type TextareaUtfyltEvent = {
   name: typeof TEXTAREA_UTFYLT_EVENT;
-  properties?: TextareaUtfyltProperties;
+  properties: TextareaUtfyltProperties;
 };

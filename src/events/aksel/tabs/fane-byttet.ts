@@ -5,11 +5,11 @@ export const FANE_BYTTET_EVENT = 'fane byttet' as const;
 
 export interface FaneByttetProperties {
   /** Identifikator for tabs-containeren */
-  tabsId?: string;
+  tabsId: string;
   /** Fane-verdi som ble forlatt */
   fraFane?: string;
   /** Fane-verdi som ble valgt */
-  tilFane?: string;
+  tilFane: string;
   /** Teksten på den nye fanen */
   tilFaneTekst?: string;
   /** Hvordan fanen ble byttet */
@@ -22,5 +22,5 @@ export interface FaneByttetProperties {
 
 export type FaneByttetEvent = {
   name: typeof FANE_BYTTET_EVENT;
-  properties?: FaneByttetProperties;
+  properties: FaneByttetProperties;
 };

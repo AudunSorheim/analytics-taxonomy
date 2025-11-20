@@ -7,10 +7,10 @@ export interface UtvidbartKortApnetProperties {
   /** Identifikator for kortet */
   kortId?: string;
   /** Tittel på kortet */
-  tittel?: string;
+  tittel: string;
 }
 
 export type UtvidbartKortApnetEvent = {
   name: typeof UTVIDBART_KORT_APNET_EVENT;
-  properties?: UtvidbartKortApnetProperties;
+  properties: UtvidbartKortApnetProperties;
 };

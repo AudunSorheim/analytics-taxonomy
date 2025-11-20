@@ -9,10 +9,10 @@ export interface LastNedProperties {
   /** Tema eller kategori for nedlastingen */
   tema?: string;
   /** Tittel på filen som ble lastet ned */
-  tittel?: string;
+  tittel: string;
 }
 
 export type LastNedEvent = {
   name: typeof LAST_NED_EVENT;
-  properties?: LastNedProperties;
+  properties: LastNedProperties;
 };

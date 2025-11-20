@@ -5,10 +5,10 @@ export const HELPTEXT_LUKKET_EVENT = 'helptext lukket' as const;
 
 export interface HelpTextLukketProperties {
   /** Id til helptext-komponenten */
-  komponentId?: string;
+  komponentId: string;
 }
 
 export type HelpTextLukketEvent = {
   name: typeof HELPTEXT_LUKKET_EVENT;
-  properties?: HelpTextLukketProperties;
+  properties: HelpTextLukketProperties;
 };

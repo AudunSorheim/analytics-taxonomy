@@ -5,14 +5,14 @@ export const MONTHPICKER_MANED_VALGT_EVENT = 'monthpicker måned valgt' as const
 
 export interface MonthPickerManedValgtProperties {
   /** Id eller navn på monthpicker-komponenten */
-  komponentId?: string;
+  komponentId: string;
   /** ISO-representasjon av måneden (YYYY-MM) */
-  maned?: string;
+  maned: string;
   /** Tidligere valgt måned */
   forrigeManed?: string;
 }
 
 export type MonthPickerManedValgtEvent = {
   name: typeof MONTHPICKER_MANED_VALGT_EVENT;
-  properties?: MonthPickerManedValgtProperties;
+  properties: MonthPickerManedValgtProperties;
 };

@@ -5,14 +5,14 @@ export const NEDTREKKSLISTE_VALG_ENDRET_EVENT = 'nedtrekksliste valg endret' as 
 
 export interface NedtrekkslisteValgEndretProperties {
   /** Verdien som ble valgt */
-  valgtVerdi?: string;
+  valgtVerdi: string;
   /** Teksten som vises for valget */
-  tekst?: string;
+  tekst: string;
   /** Identifikator for listen */
   listeId?: string;
 }
 
 export type NedtrekkslisteValgEndretEvent = {
   name: typeof NEDTREKKSLISTE_VALG_ENDRET_EVENT;
-  properties?: NedtrekkslisteValgEndretProperties;
+  properties: NedtrekkslisteValgEndretProperties;
 };

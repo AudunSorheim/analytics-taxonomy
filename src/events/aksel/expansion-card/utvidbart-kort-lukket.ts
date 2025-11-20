@@ -7,10 +7,10 @@ export interface UtvidbartKortLukketProperties {
   /** Identifikator for kortet */
   kortId?: string;
   /** Tittel på kortet */
-  tittel?: string;
+  tittel: string;
 }
 
 export type UtvidbartKortLukketEvent = {
   name: typeof UTVIDBART_KORT_LUKKET_EVENT;
-  properties?: UtvidbartKortLukketProperties;
+  properties: UtvidbartKortLukketProperties;
 };

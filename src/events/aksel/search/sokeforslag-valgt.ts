@@ -10,5 +10,5 @@ export interface SokeforslagValgtProperties {
 
 export type SokeforslagValgtEvent = {
   name: typeof SOKEFORSLAG_VALGT_EVENT;
-  properties?: SokeforslagValgtProperties;
+  properties: SokeforslagValgtProperties;
 };

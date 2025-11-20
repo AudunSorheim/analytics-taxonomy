@@ -7,10 +7,10 @@ export interface SkjemaStartetProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
   /** Unik identifikator for skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
 }
 
 export type SkjemaStartetEvent = {
   name: typeof SKJEMA_STARTET_EVENT;
-  properties?: SkjemaStartetProperties;
+  properties: SkjemaStartetProperties;
 };

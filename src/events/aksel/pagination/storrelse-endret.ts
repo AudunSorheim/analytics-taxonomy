@@ -5,7 +5,7 @@ export const PAGINERING_STORRELSE_ENDRET_EVENT = 'paginering størrelse endret' 
 
 export interface PagineringStorrelseEndretProperties {
   /** Id eller plassering til pagineringen */
-  komponentId?: string;
+  komponentId: string;
   /** Ny størrelse (antall elementer per side) */
   nyStorrelse?: number;
   /** Tidligere størrelse */
@@ -16,5 +16,5 @@ export interface PagineringStorrelseEndretProperties {
 
 export type PagineringStorrelseEndretEvent = {
   name: typeof PAGINERING_STORRELSE_ENDRET_EVENT;
-  properties?: PagineringStorrelseEndretProperties;
+  properties: PagineringStorrelseEndretProperties;
 };

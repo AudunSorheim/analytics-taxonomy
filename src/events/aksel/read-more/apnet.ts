@@ -7,10 +7,10 @@ export interface LesMerApnetProperties {
   /** Identifikator for komponenten */
   lesMerId?: string;
   /** Tittelen til seksjonen */
-  tittel?: string;
+  tittel: string;
 }
 
 export type LesMerApnetEvent = {
   name: typeof LES_MER_APNET_EVENT;
-  properties?: LesMerApnetProperties;
+  properties: LesMerApnetProperties;
 };

@@ -18,5 +18,5 @@ export interface DatoValgtProperties {
 
 export type DatoValgtEvent = {
   name: typeof DATO_VALGT_EVENT;
-  properties?: DatoValgtProperties;
+  properties: DatoValgtProperties;
 };

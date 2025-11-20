@@ -12,5 +12,5 @@ export interface FiltervalgProperties {
 
 export type FiltervalgEvent = {
   name: typeof FILTERVALG_EVENT;
-  properties?: FiltervalgProperties;
+  properties: FiltervalgProperties;
 };

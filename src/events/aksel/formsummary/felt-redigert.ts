@@ -5,9 +5,9 @@ export const FORMSUMMARY_FELT_REDIGERT_EVENT = 'formsummary felt redigert' as co
 
 export interface FormSummaryFeltRedigertProperties {
   /** Id eller referanse til skjemaet */
-  skjemaId?: string;
+  skjemaId: string;
   /** ID på feltet som redigeres */
-  feltId?: string;
+  feltId: string;
   /** Feltets label/navn */
   feltNavn?: string;
   /** Hvilket steg feltet tilhører (hvis multi-step) */
@@ -18,5 +18,5 @@ export interface FormSummaryFeltRedigertProperties {
 
 export type FormSummaryFeltRedigertEvent = {
   name: typeof FORMSUMMARY_FELT_REDIGERT_EVENT;
-  properties?: FormSummaryFeltRedigertProperties;
+  properties: FormSummaryFeltRedigertProperties;
 };
