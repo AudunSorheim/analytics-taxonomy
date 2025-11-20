@@ -4,6 +4,8 @@
 export const KNAPP_KLIKKET_EVENT = 'knapp klikket' as const;
 
 export interface KnappKlikketProperties {
+  /** Id til knappen */
+  komponentId?: string;
   /** Teksten som vises på knappen */
   tekst?: string;
   /** Variant av knappen */

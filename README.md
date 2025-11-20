@@ -107,7 +107,7 @@ logWithExtra({
 #### Button
 | Hendelse | Konstant | Beskrivelse | Properties |
 |----------|----------|-------------|------------|
-| knapp klikket | `KNAPP_KLIKKET` | Klikk på Aksel-knapp | `tekst`, `variant`, `size` |
+| knapp klikket | `KNAPP_KLIKKET` | Klikk på Aksel-knapp | `komponentId`, `tekst`, `variant`, `size` |
 
 #### Checkbox
 | Hendelse | Konstant | Beskrivelse | Properties |
@@ -128,7 +128,7 @@ logWithExtra({
 #### CopyButton
 | Hendelse | Konstant | Beskrivelse | Properties |
 |----------|----------|-------------|------------|
-| tekst kopiert | `TEKST_KOPIERT` | Kopier-knapp brukt | `tekst` |
+| tekst kopiert | `TEKST_KOPIERT` | Kopier-knapp brukt | `komponentId`, `tekst` |
 
 #### DatePicker
 | Hendelse | Konstant | Beskrivelse | Properties |
@@ -173,7 +173,7 @@ logWithExtra({
 #### GuidePanel
 | Hendelse | Konstant | Beskrivelse | Properties |
 |----------|----------|-------------|------------|
-| guidepanel vist | `GUIDEPANEL_VIST` | Guidepanel synliggjøres | `tekst`, `komponent` |
+| guidepanel vist | `GUIDEPANEL_VIST` | Guidepanel synliggjøres | `tekst`, `komponentId` |
 
 #### HelpText
 | Hendelse | Konstant | Beskrivelse | Properties |

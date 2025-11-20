@@ -4,6 +4,8 @@
 export const LINK_KLIKKET_EVENT = 'link klikket' as const;
 
 export interface LinkKlikketProperties {
+  /** Id til lenken */
+  komponentId?: string;
   /** Lenketekst */
   tekst?: string;
   /** Destinasjons-URL */

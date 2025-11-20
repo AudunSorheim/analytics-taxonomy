@@ -6,8 +6,8 @@ export const GUIDEPANEL_VIST_EVENT = 'guidepanel vist' as const;
 export interface GuidepanelVistProperties {
   /** Tekstinnholdet i guidepanelet */
   tekst?: string;
-  /** Navn på komponenten */
-  komponent?: string;
+  /** Id til komponenten */
+  komponentId?: string;
 }
 
 export type GuidepanelVistEvent = {
