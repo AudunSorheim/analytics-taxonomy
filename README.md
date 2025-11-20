@@ -92,8 +92,8 @@ logWithExtra({
 #### ActionMenu
 | Hendelse | Konstant | Beskrivelse | Properties |
 |----------|----------|-------------|------------|
-| actionmenu åpnet | `ACTIONMENU_APNET` | Menyen ekspanderes | `komponentId`, `triggerTekst`, `aarsak`, `interaksjonsMetode`, `kontrollert`, `align`, `harUndermenyer`, `aktiveSti` |
-| actionmenu lukket | `ACTIONMENU_LUKKET` | Menyen kollapser | `komponentId`, `lukkAarsak`, `interaksjonsMetode`, `aktiveSti`, `sistValgteValgId`, `sistValgteValgTekst` |
+| actionmenu åpnet | `ACTIONMENU_APNET` | Menyen ekspanderes | `komponentId`, `triggerTekst`, `aarsak`, `interaksjonsMetode`, `kontrollert`, `align`, `harUndermenyer` |
+| actionmenu lukket | `ACTIONMENU_LUKKET` | Menyen kollapser | `komponentId`, `lukkAarsak`, `interaksjonsMetode`, `sistValgteValgId`, `sistValgteValgTekst` |
 | actionmenu valg valgt | `ACTIONMENU_VALG_VALGT` | Valg aktiveres i menyen | `komponentId`, `valgId`, `valgTekst`, `indeks`, `interaksjonsMetode`, `valgType`, `gruppeId`, `gruppeLabel`, `radioGroup`, `checked`, `shortcut`, `undermenySti`, `disabled` |
 | actionmenu undermeny åpnet | `ACTIONMENU_UNDERMENY_APNET` | Submeny ekspanderes | `komponentId`, `sti`, `triggerTekst`, `niva`, `forelderValgId`, `interaksjonsMetode` |
 | actionmenu undermeny lukket | `ACTIONMENU_UNDERMENY_LUKKET` | Submeny kollapser | `komponentId`, `sti`, `triggerTekst`, `niva`, `lukkAarsak`, `interaksjonsMetode` |

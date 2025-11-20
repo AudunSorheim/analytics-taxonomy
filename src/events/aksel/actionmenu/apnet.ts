@@ -7,24 +7,22 @@ export const ACTIONMENU_APNET_EVENT = 'actionmenu åpnet' as const;
 
 export interface ActionMenuApnetProperties {
   /** Id eller annen referanse til menyen */
-  komponentId?: string;
+  komponentId: string;
   /** Teksten på knappen eller triggeren */
-  triggerTekst?: string;
+  triggerTekst: string;
   /** Hva som førte til åpningen (klikk, tastatur, programmatisk) */
   aarsak?: string;
   /** Presis interaksjonsmetode (mus, tastatur, snarvei osv.) */
-  interaksjonsMetode?: ActionMenuInteraksjonsMetode;
+  interaksjonsMetode: ActionMenuInteraksjonsMetode;
   /** Om komponenten styres kontrollert via state */
   kontrollert?: boolean;
   /** Justeringen til meny-innholdet (ref. Aksel prop) */
   align?: 'start' | 'end';
   /** Om menyen inneholder minst én undermeny */
   harUndermenyer?: boolean;
-  /** Hvilken sti som er aktiv når menyen åpnes (tom for toppnivå) */
-  aktiveSti?: ActionMenuSti;
 }
 
 export type ActionMenuApnetEvent = {
   name: typeof ACTIONMENU_APNET_EVENT;
-  properties?: ActionMenuApnetProperties;
+  properties: ActionMenuApnetProperties;
 };
