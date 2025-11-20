@@ -12,5 +12,5 @@ export interface AlertVistProperties {
 
 export type AlertVistEvent = {
   name: typeof ALERT_VIST_EVENT;
-  properties?: AlertVistProperties;
+  properties: AlertVistProperties;
 };

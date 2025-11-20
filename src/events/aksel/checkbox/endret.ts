@@ -14,5 +14,5 @@ export interface AvkrysningsboksEndretProperties {
 
 export type AvkrysningsboksEndretEvent = {
   name: typeof AVKRYSNINGSBOKS_ENDRET_EVENT;
-  properties?: AvkrysningsboksEndretProperties;
+  properties: AvkrysningsboksEndretProperties;
 };

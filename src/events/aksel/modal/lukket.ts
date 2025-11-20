@@ -5,7 +5,7 @@ export const MODAL_LUKKET_EVENT = 'modal lukket' as const;
 
 export interface ModalLukketProperties {
   /** ID for modal-dialogen */
-  modalId?: string;
+  modalId: string;
   /** Tittelen på modal-dialogen */
   tittel?: string;
   /** Hvordan dialogen ble lukket */
@@ -18,5 +18,5 @@ export interface ModalLukketProperties {
 
 export type ModalLukketEvent = {
   name: typeof MODAL_LUKKET_EVENT;
-  properties?: ModalLukketProperties;
+  properties: ModalLukketProperties;
 };

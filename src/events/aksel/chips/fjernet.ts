@@ -14,5 +14,5 @@ export interface ChipFjernetProperties {
 
 export type ChipFjernetEvent = {
   name: typeof CHIP_FJERNET_EVENT;
-  properties?: ChipFjernetProperties;
+  properties: ChipFjernetProperties;
 };

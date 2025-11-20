@@ -16,5 +16,5 @@ export interface ChipToggledProperties {
 
 export type ChipToggledEvent = {
   name: typeof CHIP_TOGGLED_EVENT;
-  properties?: ChipToggledProperties;
+  properties: ChipToggledProperties;
 };

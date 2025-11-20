@@ -23,13 +23,13 @@ export interface ActionMenuValgValgtProperties {
   /** Om det er item, checkbox, radio eller subtrigger */
   valgType?: ActionMenuValgType;
   /** Id eller label for gruppen elementet tilhører */
-  gruppeId: string;
+  gruppeId?: string;
   /** Visuell label for gruppen */
   gruppeLabel?: string;
   /** Navnet på RadioGroup hvis elementet er radio */
   radioGroup?: string;
   /** Gjeldende tilstand (for checkbox/radio) */
-  checked: boolean;
+  checked?: boolean;
   /** Eventuell snarvei som ble brukt eller vises */
   shortcut?: string;
   /** Hvilken sti i hierarkiet valget tilhører */

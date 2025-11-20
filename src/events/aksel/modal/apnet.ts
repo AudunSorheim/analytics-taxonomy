@@ -5,12 +5,12 @@ export const MODAL_APNET_EVENT = 'modal åpnet' as const;
 
 export interface ModalApnetProperties {
   /** ID for modal-dialogen */
-  modalId?: string;
+  modalId: string;
   /** Tittelen på modal-dialogen */
   tittel?: string;
 }
 
 export type ModalApnetEvent = {
   name: typeof MODAL_APNET_EVENT;
-  properties?: ModalApnetProperties;
+  properties: ModalApnetProperties;
 };

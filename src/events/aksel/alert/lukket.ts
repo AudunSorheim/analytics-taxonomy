@@ -12,5 +12,5 @@ export interface AlertLukketProperties {
 
 export type AlertLukketEvent = {
   name: typeof ALERT_LUKKET_EVENT;
-  properties?: AlertLukketProperties;
+  properties: AlertLukketProperties;
 };

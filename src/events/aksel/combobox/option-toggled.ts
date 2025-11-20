@@ -18,5 +18,5 @@ export interface ComboboxOptionToggledProperties {
 
 export type ComboboxOptionToggledEvent = {
   name: typeof COMBOBOX_OPTION_TOGGLED_EVENT;
-  properties?: ComboboxOptionToggledProperties;
+  properties: ComboboxOptionToggledProperties;
 };
