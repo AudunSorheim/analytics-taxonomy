@@ -320,7 +320,7 @@ Navngivningen følger Nav sitt [designsystem (Aksel)](https://aksel.nav.no/desig
 - Bruk naturlig språk: "skjema åpnet" (ikke "form_opened")
 - Skal leses godt i en setning: "Skjemaet ble **åpnet** av brukeren"
 - Bruk camelCase for properties: `pagePath`, `lenketekst`
-- Alle properties er valgfrie (bruk `?:`)
+- Gjør properties påkrevde hvis de alltid er tilgjengelige, ellers valgfrie (bruk `?:`)
 
 **Slik legger du til en ny hendelse:**
 
