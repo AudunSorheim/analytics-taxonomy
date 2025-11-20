@@ -15,7 +15,7 @@ export interface ActionMenuLukketProperties {
   /** Hvordan menyen ble lukket (valg, klikk utenfor, escape, etc.) */
   lukkAarsak?: ActionMenuLukkAarsak;
   /** Presis interaksjonsmetode (mus, tastatur, snarvei osv.) */
-  interaksjonsMetode: ActionMenuInteraksjonsMetode;
+  interaksjonsMetode?: ActionMenuInteraksjonsMetode;
   /** Id til siste valg som førte til lukking (hvis relevant) */
   sistValgteValgId?: string;
   /** Label på siste valg som førte til lukking (hvis relevant) */

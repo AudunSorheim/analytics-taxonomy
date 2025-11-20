@@ -11,11 +11,11 @@ export const ACTIONMENU_VALG_VALGT_EVENT = 'actionmenu valg valgt' as const;
 
 export interface ActionMenuValgValgtProperties {
   /** Id eller annen referanse til menyen */
-  komponentId?: string;
+  komponentId: string;
   /** Id for valget som ble valgt */
-  valgId?: string;
+  valgId: string;
   /** Leser-vennlig navn på valget */
-  valgTekst?: string;
+  valgTekst: string;
   /** 0-indeksert posisjon i menyen */
   indeks?: number;
   /** Presis interaksjonsmetode (mus, tastatur, snarvei osv.) */
@@ -23,13 +23,13 @@ export interface ActionMenuValgValgtProperties {
   /** Om det er item, checkbox, radio eller subtrigger */
   valgType?: ActionMenuValgType;
   /** Id eller label for gruppen elementet tilhører */
-  gruppeId?: string;
+  gruppeId: string;
   /** Visuell label for gruppen */
   gruppeLabel?: string;
   /** Navnet på RadioGroup hvis elementet er radio */
   radioGroup?: string;
   /** Gjeldende tilstand (for checkbox/radio) */
-  checked?: boolean;
+  checked: boolean;
   /** Eventuell snarvei som ble brukt eller vises */
   shortcut?: string;
   /** Hvilken sti i hierarkiet valget tilhører */
@@ -40,5 +40,5 @@ export interface ActionMenuValgValgtProperties {
 
 export type ActionMenuValgValgtEvent = {
   name: typeof ACTIONMENU_VALG_VALGT_EVENT;
-  properties?: ActionMenuValgValgtProperties;
+  properties: ActionMenuValgValgtProperties;
 };

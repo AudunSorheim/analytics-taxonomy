@@ -13,7 +13,7 @@ export interface ActionMenuApnetProperties {
   /** Hva som førte til åpningen (klikk, tastatur, programmatisk) */
   aarsak?: string;
   /** Presis interaksjonsmetode (mus, tastatur, snarvei osv.) */
-  interaksjonsMetode: ActionMenuInteraksjonsMetode;
+  interaksjonsMetode?: ActionMenuInteraksjonsMetode;
   /** Om komponenten styres kontrollert via state */
   kontrollert?: boolean;
   /** Justeringen til meny-innholdet (ref. Aksel prop) */

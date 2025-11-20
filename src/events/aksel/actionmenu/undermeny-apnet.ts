@@ -8,11 +8,11 @@ export const ACTIONMENU_UNDERMENY_APNET_EVENT = 'actionmenu undermeny åpnet' as
 
 export interface ActionMenuUndermenyApnetProperties {
   /** Id eller annen referanse til hovedmenyen */
-  komponentId?: string;
+  komponentId: string;
   /** Sti fra hovedmeny til denne undermenyen */
   sti?: ActionMenuSti;
   /** Navnet på subtriggeren */
-  triggerTekst?: string;
+  triggerTekst: string;
   /** 1 for første nivå, 2 for nested nivå osv. */
   niva?: number;
   /** Eventuell referanse til valget som åpnet undermenyen */
@@ -23,5 +23,5 @@ export interface ActionMenuUndermenyApnetProperties {
 
 export type ActionMenuUndermenyApnetEvent = {
   name: typeof ACTIONMENU_UNDERMENY_APNET_EVENT;
-  properties?: ActionMenuUndermenyApnetProperties;
+  properties: ActionMenuUndermenyApnetProperties;
 };

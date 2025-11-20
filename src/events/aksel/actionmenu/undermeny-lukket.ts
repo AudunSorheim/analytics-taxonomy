@@ -11,11 +11,11 @@ export const ACTIONMENU_UNDERMENY_LUKKET_EVENT = 'actionmenu undermeny lukket' a
 
 export interface ActionMenuUndermenyLukketProperties {
   /** Id eller annen referanse til hovedmenyen */
-  komponentId?: string;
+  komponentId: string;
   /** Sti fra hovedmeny til denne undermenyen */
   sti?: ActionMenuSti;
   /** Navnet på subtriggeren */
-  triggerTekst?: string;
+  triggerTekst: string;
   /** 1 for første nivå, 2 for nested nivå osv. */
   niva?: number;
   /** Hvordan undermenyen ble lukket */
@@ -26,5 +26,5 @@ export interface ActionMenuUndermenyLukketProperties {
 
 export type ActionMenuUndermenyLukketEvent = {
   name: typeof ACTIONMENU_UNDERMENY_LUKKET_EVENT;
-  properties?: ActionMenuUndermenyLukketProperties;
+  properties: ActionMenuUndermenyLukketProperties;
 };
