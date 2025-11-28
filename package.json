@@ -36,6 +36,15 @@
     "url": "https://github.com/navikt/analytics-taxonomy/issues"
   },
   "homepage": "https://github.com/navikt/analytics-taxonomy#readme",
+  "keywords": [
+    "analytics",
+    "taxonomy",
+    "nav",
+    "aksel",
+    "umami",
+    "typescript",
+    "types"
+  ],
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=9.0.0"
