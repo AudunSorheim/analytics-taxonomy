@@ -1,4 +1,4 @@
-# Contributing to Analytics Types
+# Bidra til Analytics Types
 
 ## Om taksonomien
 
@@ -91,50 +91,50 @@ npm run build
    - Eksempel på bruk
    - Hvilket team/applikasjon som trenger det
 
-## Publishing to GitHub Packages
+## Publisering til GitHub Packages
 
-This project uses a manual publishing workflow to GitHub Packages.
+Dette prosjektet bruker en manuell publiseringsflyt til GitHub Packages.
 
-### Prerequisites
+### Forutsetninger
 
-1.  **Authenticate with GitHub Packages** (One-time setup)
-    *   If you haven't already, you need to authenticate with GitHub Packages.
-    *   Create a Personal Access Token (PAT) on GitHub with `write:packages`, `read:packages`, and `repo` scopes.
-    *   Login to npm using your GitHub credentials:
+1.  **Autentisering mot GitHub Packages** (Engangsoppsett)
+    *   Hvis du ikke allerede har gjort det, må du autentisere deg mot GitHub Packages.
+    *   Opprett en Personal Access Token (PAT) på GitHub med `write:packages`, `read:packages`, og `repo` tilganger.
+    *   Logg inn på npm med din GitHub-bruker:
         ```bash
         npm login --scope=@navikt --registry=https://npm.pkg.github.com
         ```
-        *   **Username:** Your GitHub username
-        *   **Password:** Your Personal Access Token (PAT)
-        *   **Email:** Your public email address
-    *   **Note:** If you have already configured your `~/.npmrc` with an auth token for `//npm.pkg.github.com/`, you can skip this step.
+        *   **Username:** Ditt GitHub-brukernavn
+        *   **Password:** Din Personal Access Token (PAT)
+        *   **Email:** Din offentlige e-postadresse
+    *   **Merk:** Hvis du allerede har konfigurert din `~/.npmrc` med en auth token for `//npm.pkg.github.com/`, kan du hoppe over dette steget.
 
-### Release Process
+### Publiseringsprosess
 
-1.  **Prepare the Workspace**
-    *   Ensure you are on the `main` branch and have the latest changes:
+1.  **Forbered arbeidsområdet**
+    *   Sørg for at du er på `main`-branchen og har de siste endringene:
         ```bash
         git checkout main
         git pull origin main
         ```
-    *   Make sure your working directory is clean.
+    *   Sørg for at arbeidskatalogen din er ren (ingen ulagrede endringer).
 
-2.  **Update Changelog**
-    *   Update `CHANGELOG.md` with a summary of the changes in this release.
-    *   Commit the changelog changes:
+2.  **Oppdater Changelog**
+    *   Oppdater `CHANGELOG.md` med en oppsummering av endringene i denne releasen.
+    *   Commit endringene i changelog:
         ```bash
         git add CHANGELOG.md
         git commit -m "docs: Update changelog"
         ```
 
-3.  **Bump Version**
-    *   Run the `npm version` command to update `package.json`, create a git tag, and commit the change.
-    *   Choose the appropriate semantic version bump:
-        *   **Patch** (Bug fixes):
+3.  **Oppdater versjon**
+    *   Kjør `npm version`-kommandoen for å oppdatere `package.json`, opprette en git tag, og committe endringen.
+    *   Velg passende semantisk versjonering:
+        *   **Patch** (Feilrettinger):
             ```bash
             npm version patch
             ```
-        *   **Minor** (New features, backwards compatible):
+        *   **Minor** (Nye funksjoner, bakoverkompatibel):
             ```bash
             npm version minor
             ```
@@ -143,22 +143,22 @@ This project uses a manual publishing workflow to GitHub Packages.
             npm version major
             ```
 
-4.  **Verify Build**
-    *   Ensure everything builds and tests pass before publishing:
+4.  **Verifiser bygg**
+    *   Sørg for at alt bygger og tester passerer før publisering:
         ```bash
         npm run test
         npm run build
         ```
-    *   *(Note: `npm publish` will also run `prepublishOnly` which executes these checks, but it's good to verify manually first)*
+    *   *(Merk: `npm publish` vil også kjøre `prepublishOnly` som utfører disse sjekkene, men det er lurt å verifisere manuelt først)*
 
-5.  **Publish**
-    *   Publish the package to the GitHub Registry:
+5.  **Publiser**
+    *   Publiser pakken til GitHub Registry:
         ```bash
         npm publish --registry=https://npm.pkg.github.com/
         ```
 
-6.  **Push Changes**
-    *   Push the new commits and tags to GitHub:
+6.  **Push endringer**
+    *   Push de nye commitsene og tagsene til GitHub:
         ```bash
         git push && git push --tags
         ```
