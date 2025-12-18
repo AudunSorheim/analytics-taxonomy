@@ -15,14 +15,14 @@ npm install @navikt/analytics-types
 import { Events, type NavigereProperties } from '@navikt/analytics-types';
 import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 
-const analytics = getAnalyticsInstance();
+const analytics = getAnalyticsInstance('mitt-app-navn');
 
 const properties: NavigereProperties = {
   lenketekst: 'Les mer',
   destinasjon: '/side/info'
 };
 
-analytics.logEvent(Events.NAVIGERE, properties);
+analytics(Events.NAVIGERE, properties);
 ```
 
 ## Avansert bruk
@@ -33,10 +33,10 @@ analytics.logEvent(Events.NAVIGERE, properties);
 import { Events, type TaxonomyEvent } from '@navikt/analytics-types';
 import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 
-const analytics = getAnalyticsInstance();
+const analytics = getAnalyticsInstance('mitt-app-navn');
 
 function logTaxonomyEvent(event: TaxonomyEvent) {
-  analytics.logEvent(event.name, event.properties);
+  analytics(event.name, event.properties);
 }
 
 logTaxonomyEvent({
@@ -57,14 +57,14 @@ import {
   isValidEventName
 } from '@navikt/analytics-types';
 
-const analytics = getAnalyticsInstance();
+const analytics = getAnalyticsInstance('mitt-app-navn');
 
 type TaxonomyEventWithExtra = TaxonomyEvent & {
   properties?: TaxonomyEvent['properties'] & Record<string, unknown>;
 };
 
 function logWithExtra(event: TaxonomyEventWithExtra) {
-  analytics.logEvent(event.name, event.properties);
+  analytics(event.name, event.properties);
 }
 
 logWithExtra({
