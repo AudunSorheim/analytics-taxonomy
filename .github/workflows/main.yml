@@ -1,0 +1,44 @@
+name: Test and build taxonomy
+
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+      - ".gitignore"
+      - "LICENCE"
+      - "CODEOWNERS"
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Test and build taxonomy
+    runs-on: ubuntu-latest
+    if: github.event.pusher.name != 'github-actions'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Setting up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@navikt'
+
+      - name: Installing Dependencies
+        run: npm ci
+
+      - name: Running Tests
+        run: npm run test
+
+      - name: Build Assets
+        run: npm run build
