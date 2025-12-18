@@ -5,9 +5,9 @@ export const TAG_FJERNET_EVENT = 'tag fjernet' as const;
 
 export interface TagFjernetProperties {
   /** Id eller verdi for taggen */
-  tagId: string;
+  tagId?: string;
   /** Tekst/etikett som vises i taggen */
-  tekst: string;
+  tekst?: string;
   /** Hvordan taggen ble fjernet (klikk, tastatur) */
   aarsak?: string;
 }

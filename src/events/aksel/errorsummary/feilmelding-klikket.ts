@@ -5,7 +5,7 @@ export const ERROR_SUMMARY_FEILMELDING_KLIKKET_EVENT = 'error-summary feilmeldin
 
 export interface ErrorSummaryFeilmeldingKlikketProperties {
   /** Id eller referanse til skjemaet */
-  skjemaId: string;
+  skjemaId?: string;
   /** ID på feltet som feilen gjelder */
   feltId: string;
   /** Feltets label/navn */

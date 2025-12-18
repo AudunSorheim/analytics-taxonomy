@@ -5,7 +5,7 @@ export const FIL_LASTET_OPP_EVENT = 'fil lastet opp' as const;
 
 export interface FilLastetOppProperties {
   /** Navnet på filen */
-  filNavn: string;
+  filNavn?: string;
   /** Filstørrelse i KB */
   filStorrelse?: number;
   /** MIME-type eller format */

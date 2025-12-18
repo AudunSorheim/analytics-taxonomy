@@ -5,7 +5,7 @@ export const HELPTEXT_VIST_EVENT = 'helptext vist' as const;
 
 export interface HelpTextVistProperties {
   /** Id til helptext-komponenten */
-  komponentId: string;
+  komponentId?: string;
   /** Tekstinnholdet i hjelpeteksten */
   tekst: string;
   /** Plassering av popover */

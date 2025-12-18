@@ -5,7 +5,7 @@ export const SWITCH_TILSTAND_ENDRET_EVENT = 'switch tilstand endret' as const;
 
 export interface SwitchTilstandEndretProperties {
   /** Id for switchen */
-  komponentId: string;
+  komponentId?: string;
   /** Ny tilstand */
   erPa: boolean;
   /** Tidligere tilstand */

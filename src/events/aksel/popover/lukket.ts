@@ -5,7 +5,7 @@ export const POPOVER_LUKKET_EVENT = 'popover lukket' as const;
 
 export interface PopoverLukketProperties {
   /** Id til popover-komponenten */
-  komponentId: string;
+  komponentId?: string;
   /** Hvordan popoveren ble lukket */
   lukkMetode?: string;
 }

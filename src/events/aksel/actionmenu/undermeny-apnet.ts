@@ -8,7 +8,7 @@ export const ACTIONMENU_UNDERMENY_APNET_EVENT = 'actionmenu undermeny åpnet' as
 
 export interface ActionMenuUndermenyApnetProperties {
   /** Id eller annen referanse til hovedmenyen */
-  komponentId: string;
+  komponentId?: string;
   /** Sti fra hovedmeny til denne undermenyen */
   sti?: ActionMenuSti;
   /** Navnet på subtriggeren */

@@ -5,13 +5,13 @@ export const FORMSUMMARY_VIST_EVENT = 'formsummary vist' as const;
 
 export interface FormSummaryVistProperties {
   /** Id eller referanse til skjemaet */
-  skjemaId: string;
+  skjemaId?: string;
   /** Antall felt i oppsummeringen */
   antallFelt: number;
   /** Om oppsummeringen er redigerbar */
   erRedigerbar?: boolean;
   /** Kontekst (innsending, forhåndsvisning) */
-  kontekst: string;
+  kontekst?: string;
 }
 
 export type FormSummaryVistEvent = {

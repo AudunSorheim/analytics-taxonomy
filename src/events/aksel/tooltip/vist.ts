@@ -5,9 +5,9 @@ export const TOOLTIP_VIST_EVENT = 'tooltip vist' as const;
 
 export interface TooltipVistProperties {
   /** Id på elementet som har tooltipen */
-  komponentId: string;
+  komponentId?: string;
   /** Tekstinnholdet i tooltipen */
-  tekst: string;
+  tekst?: string;
 }
 
 export type TooltipVistEvent = {

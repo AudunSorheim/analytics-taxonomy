@@ -5,7 +5,7 @@ export const TABELL_RAD_UTVIDET_EVENT = 'tabell rad utvidet' as const;
 
 export interface TabellRadUtvidetProperties {
   /** Id eller referanse til tabellen */
-  komponentId: string;
+  komponentId?: string;
   /** ID på raden som utvides */
   radId: string;
   /** Radnummer (0-indeksert) */

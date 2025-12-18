@@ -5,7 +5,7 @@ export const LINKCARD_KLIKKET_EVENT = 'linkcard klikket' as const;
 
 export interface LinkCardKlikketProperties {
   /** Id eller referanse til kortet */
-  komponentId: string;
+  komponentId?: string;
   /** Overskriften som vises i kortet */
   tittel: string;
   /** Destinasjon/lenke kortet peker til */

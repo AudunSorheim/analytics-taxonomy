@@ -5,7 +5,7 @@ export const FIL_FJERNET_EVENT = 'fil fjernet' as const;
 
 export interface FilFjernetProperties {
   /** Navnet på filen */
-  filNavn: string;
+  filNavn?: string;
 }
 
 export type FilFjernetEvent = {

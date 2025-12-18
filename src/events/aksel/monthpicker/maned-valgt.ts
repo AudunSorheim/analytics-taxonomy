@@ -5,7 +5,7 @@ export const MONTHPICKER_MANED_VALGT_EVENT = 'monthpicker måned valgt' as const
 
 export interface MonthPickerManedValgtProperties {
   /** Id eller navn på monthpicker-komponenten */
-  komponentId: string;
+  komponentId?: string;
   /** ISO-representasjon av måneden (YYYY-MM) */
   maned: string;
   /** Tidligere valgt måned */

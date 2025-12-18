@@ -11,7 +11,7 @@ export const ACTIONMENU_VALG_VALGT_EVENT = 'actionmenu valg valgt' as const;
 
 export interface ActionMenuValgValgtProperties {
   /** Id eller annen referanse til menyen */
-  komponentId: string;
+  komponentId?: string;
   /** Id for valget som ble valgt */
   valgId: string;
   /** Leser-vennlig navn på valget */

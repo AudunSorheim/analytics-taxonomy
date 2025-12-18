@@ -5,7 +5,7 @@ export const ACCORDION_APNET_EVENT = 'accordion åpnet' as const;
 
 export interface AccordionApnetProperties {
   /** Unik id for komponenten */
-  komponentId: string;
+  komponentId?: string;
   /** Tittelen til accordionen */
   tittel?: string;
 }

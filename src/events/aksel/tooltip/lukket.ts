@@ -5,7 +5,7 @@ export const TOOLTIP_LUKKET_EVENT = 'tooltip lukket' as const;
 
 export interface TooltipLukketProperties {
   /** Id på elementet som hadde tooltipen */
-  komponentId: string;
+  komponentId?: string;
 }
 
 export type TooltipLukketEvent = {

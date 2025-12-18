@@ -5,13 +5,13 @@ export const PAGINERING_SIDE_VALGT_EVENT = 'paginering side valgt' as const;
 
 export interface PagineringSideValgtProperties {
   /** Id eller plassering til pagineringen */
-  komponentId: string;
+  komponentId?: string;
   /** Siden som ble valgt (1-index) */
   side: number;
   /** Forrige side før endringen */
   forrigeSide?: number;
   /** Totalt antall sider */
-  antallSider: number;
+  antallSider?: number;
   /** Navigasjonstype (neste, forrige, første, siste, spesifikk) */
   navigasjonsType?: 'neste' | 'forrige' | 'forste' | 'siste' | 'direkte';
   /** Om det finnes neste side */

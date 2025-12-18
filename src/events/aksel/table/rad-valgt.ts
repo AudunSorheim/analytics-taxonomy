@@ -5,7 +5,7 @@ export const TABELL_RAD_VALGT_EVENT = 'tabell rad valgt' as const;
 
 export interface TabellRadValgtProperties {
   /** Id eller referanse til tabellen */
-  komponentId: string;
+  komponentId?: string;
   /** Id for raden som velges */
   radId: string;
   /** Indeks (0-basert) for raden */

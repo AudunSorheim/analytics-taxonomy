@@ -11,7 +11,7 @@ export const ACTIONMENU_LUKKET_EVENT = 'actionmenu lukket' as const;
 
 export interface ActionMenuLukketProperties {
   /** Id eller annen referanse til menyen */
-  komponentId: string;
+  komponentId?: string;
   /** Hvordan menyen ble lukket (valg, klikk utenfor, escape, etc.) */
   lukkAarsak?: ActionMenuLukkAarsak;
   /** Presis interaksjonsmetode (mus, tastatur, snarvei osv.) */

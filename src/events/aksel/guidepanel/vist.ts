@@ -7,7 +7,7 @@ export interface GuidepanelVistProperties {
   /** Tekstinnholdet i guidepanelet */
   tekst: string;
   /** Id til komponenten */
-  komponentId: string;
+  komponentId?: string;
 }
 
 export type GuidepanelVistEvent = {

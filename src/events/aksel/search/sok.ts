@@ -5,13 +5,13 @@ export const SOK_EVENT = 'søk gjennomført' as const;
 
 export interface SokProperties {
   /** Tekst/identifikator for søkekomponenten */
-  tekst: string;
+  tekst?: string;
   /** Antall treff som søket ga */
-  søkeResultater: number;
+  søkeResultater?: number;
   /** Om søket ga resultater */
   harResultater?: boolean;
   /** Søkefrase/query */
-  sokefrase: string;
+  sokefrase?: string;
   /** Sorteringsmetode anvendt */
   sortering?: string;
   /** Filtre som var aktive under søk */

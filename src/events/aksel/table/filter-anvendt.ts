@@ -5,7 +5,7 @@ export const TABELL_FILTER_ANVENDT_EVENT = 'tabell filter anvendt' as const;
 
 export interface TabellFilterAnvendtProperties {
   /** Id eller referanse til tabellen */
-  komponentId: string;
+  komponentId?: string;
   /** Hvilken kolonne som filtreres */
   kolonneId?: string;
   /** Kolonnenavn */

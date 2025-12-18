@@ -5,7 +5,7 @@ export const FORMSUMMARY_FELT_REDIGERT_EVENT = 'formsummary felt redigert' as co
 
 export interface FormSummaryFeltRedigertProperties {
   /** Id eller referanse til skjemaet */
-  skjemaId: string;
+  skjemaId?: string;
   /** ID på feltet som redigeres */
   feltId: string;
   /** Feltets label/navn */

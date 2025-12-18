@@ -5,7 +5,7 @@ export const TABELL_SORTERING_ENDRET_EVENT = 'tabell sortering endret' as const;
 
 export interface TabellSorteringEndretProperties {
   /** Id eller referanse til tabellen */
-  komponentId: string;
+  komponentId?: string;
   /** Hvilken kolonne som sorteres */
   kolonne: string;
   /** Retningen på sorteringen */

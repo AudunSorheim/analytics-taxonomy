@@ -7,7 +7,7 @@ export interface LesMerApnetProperties {
   /** Identifikator for komponenten */
   lesMerId?: string;
   /** Tittelen til seksjonen */
-  tittel: string;
+  tittel?: string;
 }
 
 export type LesMerApnetEvent = {
