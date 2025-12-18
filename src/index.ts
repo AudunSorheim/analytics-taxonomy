@@ -31,6 +31,14 @@ export * from './events/aksel/actionmenu/undermeny-lukket';
 export * from './events/aksel/actionmenu/types';
 export * from './events/aksel/alert/lukket';
 export * from './events/aksel/alert/vist';
+export * from './events/aksel/globalalert/vist';
+export * from './events/aksel/globalalert/lukket';
+export * from './events/aksel/localalert/vist';
+export * from './events/aksel/localalert/lukket';
+export * from './events/aksel/inlinemessage/vist';
+export * from './events/aksel/infocard/vist';
+export * from './events/aksel/process/vist';
+export * from './events/aksel/process/steg-klikket';
 export * from './events/aksel/checkbox/endret';
 export * from './events/besok/besok';
 export * from './events/aksel/chips/fjernet';
@@ -101,6 +109,14 @@ import { ACTIONMENU_UNDERMENY_APNET_EVENT } from './events/aksel/actionmenu/unde
 import { ACTIONMENU_UNDERMENY_LUKKET_EVENT } from './events/aksel/actionmenu/undermeny-lukket';
 import { ALERT_LUKKET_EVENT } from './events/aksel/alert/lukket';
 import { ALERT_VIST_EVENT } from './events/aksel/alert/vist';
+import { GLOBALALERT_VIST_EVENT } from './events/aksel/globalalert/vist';
+import { GLOBALALERT_LUKKET_EVENT } from './events/aksel/globalalert/lukket';
+import { LOCALALERT_VIST_EVENT } from './events/aksel/localalert/vist';
+import { LOCALALERT_LUKKET_EVENT } from './events/aksel/localalert/lukket';
+import { INLINEMESSAGE_VIST_EVENT } from './events/aksel/inlinemessage/vist';
+import { INFOCARD_VIST_EVENT } from './events/aksel/infocard/vist';
+import { PROCESS_VIST_EVENT } from './events/aksel/process/vist';
+import { PROCESS_STEG_KLIKKET_EVENT } from './events/aksel/process/steg-klikket';
 import { AVKRYSNINGSBOKS_ENDRET_EVENT } from './events/aksel/checkbox/endret';
 import { BESOK_EVENT } from './events/besok/besok';
 import { CHIP_FJERNET_EVENT } from './events/aksel/chips/fjernet';
@@ -171,6 +187,14 @@ import type { ActionMenuUndermenyApnetEvent } from './events/aksel/actionmenu/un
 import type { ActionMenuUndermenyLukketEvent } from './events/aksel/actionmenu/undermeny-lukket';
 import type { AlertLukketEvent } from './events/aksel/alert/lukket';
 import type { AlertVistEvent } from './events/aksel/alert/vist';
+import type { GlobalAlertVistEvent } from './events/aksel/globalalert/vist';
+import type { GlobalAlertLukketEvent } from './events/aksel/globalalert/lukket';
+import type { LocalAlertVistEvent } from './events/aksel/localalert/vist';
+import type { LocalAlertLukketEvent } from './events/aksel/localalert/lukket';
+import type { InlineMessageVistEvent } from './events/aksel/inlinemessage/vist';
+import type { InfoCardVistEvent } from './events/aksel/infocard/vist';
+import type { ProcessVistEvent } from './events/aksel/process/vist';
+import type { ProcessStegKlikketEvent } from './events/aksel/process/steg-klikket';
 import type { AvkrysningsboksEndretEvent } from './events/aksel/checkbox/endret';
 import type { BesokEvent } from './events/besok/besok';
 import type { ChipFjernetEvent } from './events/aksel/chips/fjernet';
@@ -391,6 +415,22 @@ export type TaxonomyEvent =
   | ActionMenuValgValgtEvent
   | ActionMenuUndermenyApnetEvent
   | ActionMenuUndermenyLukketEvent
+  | GlobalAlertVistEvent
+  | GlobalAlertLukketEvent
+  | LocalAlertVistEvent
+  | LocalAlertLukketEvent
+  | InlineMessageVistEvent
+  | InfoCardVistEvent
+  | ProcessVistEvent
+  | ProcessStegKlikketEvent
+  | GlobalAlertVistEvent
+  | GlobalAlertLukketEvent
+  | LocalAlertVistEvent
+  | LocalAlertLukketEvent
+  | InlineMessageVistEvent
+  | InfoCardVistEvent
+  | ProcessVistEvent
+  | ProcessStegKlikketEvent
   | AlertLukketEvent
   | AlertVistEvent
   | AvkrysningsboksEndretEvent
