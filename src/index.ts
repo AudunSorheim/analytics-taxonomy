@@ -1,12 +1,12 @@
 /**
- * NAV Analytics Taxonomy
+ * NAV Analytics Types
  *
  * Typesikre definisjoner for analysehendelser som brukes på tvers av NAV.
  * Kan logges til Umami direkte, eller via `getAnalyticsInstance` fra @navikt/nav-dekoratoren-moduler.
  *
  * @example
  * ```typescript
- * import { Events, type NavigereProperties } from '@navikt/analytics-taxonomy';
+ * import { Events, type NavigereProperties } from '@navikt/analytics-types';
  * import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
  *
  * const analytics = getAnalyticsInstance();

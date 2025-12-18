@@ -1,4 +1,4 @@
-# NAV Analytics Taxonomy
+# NAV Analytics Types
 
 
 Type-definisjoner for analytics-hendelser brukt på tvers av Nav sine digitale tjenester. Logg direkte til Umami, eller via `getAnalyticsInstance` fra `@navikt/nav-dekoratoren-moduler`.
@@ -7,13 +7,13 @@ Type-definisjoner for analytics-hendelser brukt på tvers av Nav sine digitale t
 ## Installasjon
 
 ```bash
-npm install @navikt/analytics-taxonomy
+npm install @navikt/analytics-types
 ```
 
 ## Kom i gang
 
 ```typescript
-import { Events, type NavigereProperties } from '@navikt/analytics-taxonomy';
+import { Events, type NavigereProperties } from '@navikt/analytics-types';
 import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 
 const analytics = getAnalyticsInstance();
@@ -31,7 +31,7 @@ analytics.logEvent(Events.NAVIGERE, properties);
 ### Lag din egen log-funksjon med `TaxonomyEvent`
 
 ```typescript
-import { Events, type TaxonomyEvent } from '@navikt/analytics-taxonomy';
+import { Events, type TaxonomyEvent } from '@navikt/analytics-types';
 import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 
 const analytics = getAnalyticsInstance();
@@ -56,7 +56,7 @@ import {
   Events,
   type TaxonomyEvent,
   isValidEventName
-} from '@navikt/analytics-taxonomy';
+} from '@navikt/analytics-types';
 
 const analytics = getAnalyticsInstance();
 

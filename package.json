@@ -1,7 +1,7 @@
 {
-  "name": "@navikt/analytics-taxonomy",
+  "name": "@navikt/analytics-types",
   "version": "0.6.0",
-  "description": "Analytics taxonomy for NAV applications",
+  "description": "Analytics types for NAV applications",
   "type": "module",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -28,14 +28,14 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/navikt/analytics-taxonomy.git"
+    "url": "git+https://github.com/navikt/analytics-types.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/navikt/analytics-taxonomy/issues"
+    "url": "https://github.com/navikt/analytics-types/issues"
   },
-  "homepage": "https://github.com/navikt/analytics-taxonomy#readme",
+  "homepage": "https://github.com/navikt/analytics-types#readme",
   "keywords": [
     "analytics",
     "taxonomy",
