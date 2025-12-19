@@ -30,12 +30,12 @@ analytics(Events.NAVIGERE, properties);
 ### Lag din egen log-funksjon med `TaxonomyEvent`
 
 ```typescript
-import { Events, type TaxonomyEvent } from '@navikt/analytics-types';
+import { Events, type TaxonomyEvent, type EventName } from '@navikt/analytics-types';
 import { getAnalyticsInstance } from '@navikt/nav-dekoratoren-moduler';
 
 const analytics = getAnalyticsInstance('mitt-app-navn');
 
-function logTaxonomyEvent(event: TaxonomyEvent) {
+function logTaxonomyEvent<K extends EventName>(event: TaxonomyEvent<K>) {
   analytics(event.name, event.properties);
 }
 

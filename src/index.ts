@@ -560,10 +560,19 @@ export type EventPropertiesMap = {
 /**
  * Union-type for alle hendelser (navn + properties).
  * Nyttig når man lager egne, typesikre wrapper-funksjoner.
+ *
+ * Tips: For best autocomplete i IDE, bruk denne typen som en generic:
+ * `function log<K extends EventName>(event: TaxonomyEvent<K>)`
  */
-export type TaxonomyEvent = {
-  [K in keyof EventPropertiesMap]: { name: K; properties: EventPropertiesMap[K] }
-}[keyof EventPropertiesMap];
+export type TaxonomyEvent<Name extends EventName = EventName> =
+  Name extends unknown
+    ? { name: Name; properties: EventPropertiesMap[Name] }
+    : never;
+
+/**
+ * Alias for EventPropertiesMap, for bakoverkompatibilitet eller preferanse.
+ */
+export type AmplitudeEvents = EventPropertiesMap;
 
 /**
  * Hjelpetype for å hente property-typene basert på hendelsesnavn.
