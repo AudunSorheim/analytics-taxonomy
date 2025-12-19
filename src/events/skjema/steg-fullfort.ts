@@ -1,13 +1,12 @@
+import type { BaseProperties } from '../types';
 /**
  * Skjema steg fullført-hendelse - trigges når et steg i skjemaet fullføres
  */
 export const SKJEMA_STEG_FULLFORT_EVENT = 'skjema steg fullført' as const;
 
-export interface SkjemaStegFullfortProperties {
+export interface SkjemaStegFullfortProperties extends BaseProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unik identifikator for skjemaet */
-  skjemaId: string;
   /** Nummer eller id for steget */
   steg?: string;
 }

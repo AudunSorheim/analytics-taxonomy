@@ -1,15 +1,14 @@
+import type { BaseProperties } from '../../types';
 /**
  * Nedtrekksliste valg endret - trigges når Select endrer verdi
  */
 export const NEDTREKKSLISTE_VALG_ENDRET_EVENT = 'nedtrekksliste valg endret' as const;
 
-export interface NedtrekkslisteValgEndretProperties {
+export interface NedtrekkslisteValgEndretProperties extends BaseProperties {
   /** Verdien som ble valgt */
   valgtVerdi?: string;
   /** Teksten som vises for valget */
   tekst?: string;
-  /** Identifikator for listen */
-  listeId?: string;
 }
 
 export type NedtrekkslisteValgEndretEvent = {

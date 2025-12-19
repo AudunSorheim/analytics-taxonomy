@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Alert lukket-hendelse - trigges når et varsel lukkes (krever closeButton)
  */
 export const ALERT_LUKKET_EVENT = 'alert lukket' as const;
 
-export interface AlertLukketProperties {
+export interface AlertLukketProperties extends BaseProperties {
   /** Variant av varselet */
   variant?: 'error' | 'warning' | 'info' | 'success';
   /** Tekstinnholdet i varselet */

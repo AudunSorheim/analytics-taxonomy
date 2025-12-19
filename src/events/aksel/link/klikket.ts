@@ -1,11 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * Link klikket - trigges når en Aksel Link aktiveres
  */
 export const LINK_KLIKKET_EVENT = 'link klikket' as const;
 
-export interface LinkKlikketProperties {
+export interface LinkKlikketProperties extends BaseProperties {
   /** Id til lenken */
-  komponentId?: string;
   /** Lenketekst */
   tekst: string;
   /** Destinasjons-URL */
@@ -15,7 +15,6 @@ export interface LinkKlikketProperties {
   /** Om lenken er intern eller ekstern */
   erEkstern?: boolean;
   /** Kontekst hvor lenken vises */
-  kontekst?: string;
 }
 
 export type LinkKlikketEvent = {

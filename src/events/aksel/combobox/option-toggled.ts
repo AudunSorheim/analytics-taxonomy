@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Combobox option toggled - trigges når et alternativ velges/fjernes i combobox
  */
 export const COMBOBOX_OPTION_TOGGLED_EVENT = 'combobox option toggled' as const;
 
-export interface ComboboxOptionToggledProperties {
+export interface ComboboxOptionToggledProperties extends BaseProperties {
   /** Verdien til alternativet */
   optionValue?: string;
   /** Teksten til alternativet */

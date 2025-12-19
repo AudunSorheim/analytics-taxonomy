@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * FormProgress steg vist - trigges når et steg i FormProgress vises
  */
 export const FORMPROGRESS_STEG_VIST_EVENT = 'formprogress steg vist' as const;
 
-export interface FormProgressStegVistProperties {
+export interface FormProgressStegVistProperties extends BaseProperties {
   /** Id eller referanse til skjemaet */
   skjemaId?: string;
   /** Nummer på aktivt steg (1-indeksert) */

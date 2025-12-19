@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Modal åpnet-hendelse - trigges når en modal åpnes
  */
 export const MODAL_APNET_EVENT = 'modal åpnet' as const;
 
-export interface ModalApnetProperties {
-  /** ID for modal-dialogen */
-  modalId?: string;
+export interface ModalApnetProperties extends BaseProperties {
   /** Tittelen på modal-dialogen */
   tittel?: string;
 }

@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Les mer lukket - trigges når ReadMore lukkes
  */
 export const LES_MER_LUKKET_EVENT = 'les mer lukket' as const;
 
-export interface LesMerLukketProperties {
-  /** Identifikator for komponenten */
-  lesMerId?: string;
+export interface LesMerLukketProperties extends BaseProperties {
   /** Tittelen til seksjonen */
   tittel?: string;
 }

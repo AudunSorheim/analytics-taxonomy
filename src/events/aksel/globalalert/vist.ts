@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * GlobalAlert vist-hendelse - trigges når et globalt varsel vises
  */
 export const GLOBALALERT_VIST_EVENT = 'globalalert vist' as const;
 
-export interface GlobalAlertVistProperties {
+export interface GlobalAlertVistProperties extends BaseProperties {
   /** Status/variant av varselet */
   status?: 'announcement' | 'success' | 'warning' | 'error';
   /** Tittel på varselet */

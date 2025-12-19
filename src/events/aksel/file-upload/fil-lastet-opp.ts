@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Fil lastet opp - trigges når bruker laster opp en fil
  */
 export const FIL_LASTET_OPP_EVENT = 'fil lastet opp' as const;
 
-export interface FilLastetOppProperties {
+export interface FilLastetOppProperties extends BaseProperties {
   /** Navnet på filen */
   filNavn?: string;
   /** Filstørrelse i KB */

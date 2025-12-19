@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Fane byttet - trigges når bruker skifter fane
  */
 export const FANE_BYTTET_EVENT = 'fane byttet' as const;
 
-export interface FaneByttetProperties {
-  /** Identifikator for tabs-containeren */
-  tabsId?: string;
+export interface FaneByttetProperties extends BaseProperties {
   /** Fane-verdi som ble forlatt */
   fraFane?: string;
   /** Fane-verdi som ble valgt */

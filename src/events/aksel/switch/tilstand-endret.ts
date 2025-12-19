@@ -1,11 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * Switch tilstand endret - trigges når bryteren slås av/på
  */
 export const SWITCH_TILSTAND_ENDRET_EVENT = 'switch tilstand endret' as const;
 
-export interface SwitchTilstandEndretProperties {
+export interface SwitchTilstandEndretProperties extends BaseProperties {
   /** Id for switchen */
-  komponentId?: string;
   /** Ny tilstand */
   erPa: boolean;
   /** Tidligere tilstand */

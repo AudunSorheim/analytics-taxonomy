@@ -21,6 +21,7 @@
  */
 
 // Eksporterer alle event-typer og properties
+export * from './events/types';
 export * from './events/aksel/accordion/apnet';
 export * from './events/aksel/accordion/lukket';
 export * from './events/aksel/actionmenu/apnet';
@@ -177,88 +178,160 @@ import { TOOLTIP_VIST_EVENT } from './events/aksel/tooltip/vist';
 import { UTVIDBART_KORT_APNET_EVENT } from './events/aksel/expansion-card/utvidbart-kort-apnet';
 import { UTVIDBART_KORT_LUKKET_EVENT } from './events/aksel/expansion-card/utvidbart-kort-lukket';
 
-// Importerer event-typer for union
+// Importerer event-typer og properties
 import type { AccordionApnetEvent } from './events/aksel/accordion/apnet';
+import type { AccordionApnetProperties } from './events/aksel/accordion/apnet';
 import type { AccordionLukketEvent } from './events/aksel/accordion/lukket';
+import type { AccordionLukketProperties } from './events/aksel/accordion/lukket';
 import type { ActionMenuApnetEvent } from './events/aksel/actionmenu/apnet';
+import type { ActionMenuApnetProperties } from './events/aksel/actionmenu/apnet';
 import type { ActionMenuLukketEvent } from './events/aksel/actionmenu/lukket';
+import type { ActionMenuLukketProperties } from './events/aksel/actionmenu/lukket';
 import type { ActionMenuValgValgtEvent } from './events/aksel/actionmenu/valg-valgt';
+import type { ActionMenuValgValgtProperties } from './events/aksel/actionmenu/valg-valgt';
 import type { ActionMenuUndermenyApnetEvent } from './events/aksel/actionmenu/undermeny-apnet';
+import type { ActionMenuUndermenyApnetProperties } from './events/aksel/actionmenu/undermeny-apnet';
 import type { ActionMenuUndermenyLukketEvent } from './events/aksel/actionmenu/undermeny-lukket';
+import type { ActionMenuUndermenyLukketProperties } from './events/aksel/actionmenu/undermeny-lukket';
 import type { AlertLukketEvent } from './events/aksel/alert/lukket';
+import type { AlertLukketProperties } from './events/aksel/alert/lukket';
 import type { AlertVistEvent } from './events/aksel/alert/vist';
+import type { AlertVistProperties } from './events/aksel/alert/vist';
 import type { GlobalAlertVistEvent } from './events/aksel/globalalert/vist';
+import type { GlobalAlertVistProperties } from './events/aksel/globalalert/vist';
 import type { GlobalAlertLukketEvent } from './events/aksel/globalalert/lukket';
+import type { GlobalAlertLukketProperties } from './events/aksel/globalalert/lukket';
 import type { LocalAlertVistEvent } from './events/aksel/localalert/vist';
+import type { LocalAlertVistProperties } from './events/aksel/localalert/vist';
 import type { LocalAlertLukketEvent } from './events/aksel/localalert/lukket';
+import type { LocalAlertLukketProperties } from './events/aksel/localalert/lukket';
 import type { InlineMessageVistEvent } from './events/aksel/inlinemessage/vist';
+import type { InlineMessageVistProperties } from './events/aksel/inlinemessage/vist';
 import type { InfoCardVistEvent } from './events/aksel/infocard/vist';
+import type { InfoCardVistProperties } from './events/aksel/infocard/vist';
 import type { ProcessVistEvent } from './events/aksel/process/vist';
+import type { ProcessVistProperties } from './events/aksel/process/vist';
 import type { ProcessStegKlikketEvent } from './events/aksel/process/steg-klikket';
+import type { ProcessStegKlikketProperties } from './events/aksel/process/steg-klikket';
 import type { AvkrysningsboksEndretEvent } from './events/aksel/checkbox/endret';
+import type { AvkrysningsboksEndretProperties } from './events/aksel/checkbox/endret';
 import type { BesokEvent } from './events/besok/besok';
+import type { BesokProperties } from './events/besok/besok';
 import type { ChipFjernetEvent } from './events/aksel/chips/fjernet';
+import type { ChipFjernetProperties } from './events/aksel/chips/fjernet';
 import type { ChipToggledEvent } from './events/aksel/chips/toggled';
+import type { ChipToggledProperties } from './events/aksel/chips/toggled';
 import type { ComboboxOptionToggledEvent } from './events/aksel/combobox/option-toggled';
+import type { ComboboxOptionToggledProperties } from './events/aksel/combobox/option-toggled';
 import type { DatoValgtEvent } from './events/aksel/datepicker/dato-valgt';
+import type { DatoValgtProperties } from './events/aksel/datepicker/dato-valgt';
 import type { ErrorSummaryVistEvent } from './events/aksel/errorsummary/vist';
+import type { ErrorSummaryVistProperties } from './events/aksel/errorsummary/vist';
 import type { ErrorSummaryFeilmeldingKlikketEvent } from './events/aksel/errorsummary/feilmelding-klikket';
+import type { ErrorSummaryFeilmeldingKlikketProperties } from './events/aksel/errorsummary/feilmelding-klikket';
 import type { FaneByttetEvent } from './events/aksel/tabs/fane-byttet';
-import type { FilFjernetEvent } from './events/aksel/file-upload/fil-fjernet';
-import type { FilLastetOppEvent } from './events/aksel/file-upload/fil-lastet-opp';
-import type { FiltervalgEvent } from './events/filtervalg/filtervalg';
-import type { FormProgressStegVistEvent } from './events/aksel/formprogress/steg-vist';
-import type { FormProgressStegKlikketEvent } from './events/aksel/formprogress/steg-klikket';
-import type { FormSummaryVistEvent } from './events/aksel/formsummary/vist';
-import type { FormSummaryFeltRedigertEvent } from './events/aksel/formsummary/felt-redigert';
-import type { GuidepanelVistEvent } from './events/aksel/guidepanel/vist';
-import type { HelpTextLukketEvent } from './events/aksel/helptext/lukket';
-import type { HelpTextVistEvent } from './events/aksel/helptext/vist';
-import type { KnappKlikketEvent } from './events/aksel/button/knapp-klikket';
-import type { LinkKlikketEvent } from './events/aksel/link/klikket';
-import type { LinkCardKlikketEvent } from './events/aksel/link-card/klikket';
-import type { LastNedEvent } from './events/last-ned/last-ned';
-import type { PagineringSideValgtEvent } from './events/aksel/pagination/side-valgt';
-import type { PagineringStorrelseEndretEvent } from './events/aksel/pagination/storrelse-endret';
-import type { LesMerApnetEvent } from './events/aksel/read-more/apnet';
-import type { LesMerLukketEvent } from './events/aksel/read-more/lukket';
-import type { ModalApnetEvent } from './events/aksel/modal/apnet';
-import type { ModalLukketEvent } from './events/aksel/modal/lukket';
-import type { MonthPickerManedValgtEvent } from './events/aksel/monthpicker/maned-valgt';
-import type { NavigereEvent } from './events/navigere/navigere';
-import type { NedtrekkslisteValgEndretEvent } from './events/aksel/select/nedtrekksliste-valg-endret';
-import type { PopoverApnetEvent } from './events/aksel/popover/apnet';
-import type { PopoverLukketEvent } from './events/aksel/popover/lukket';
-import type { RadioValgEndretEvent } from './events/aksel/radio/valg-endret';
-import type { SkjemaApnetEvent } from './events/skjema/apnet';
-import type { SkjemaFullfortEvent } from './events/skjema/fullfort';
-import type { SkjemaInnsendingFeiletEvent } from './events/skjema/innsending-feilet';
-import type { SkjemaSporsmalBesvartEvent } from './events/skjema/sporsmal-besvart';
-import type { SkjemaStartetEvent } from './events/skjema/startet';
-import type { SkjemaStegFullfortEvent } from './events/skjema/steg-fullfort';
-import type { SkjemaValideringFeiletEvent } from './events/skjema/validering-feilet';
-import type { SokEvent } from './events/aksel/search/sok';
-import type { SokeforslagValgtEvent } from './events/aksel/search/sokeforslag-valgt';
-import type { StepperStegEndretEvent } from './events/aksel/stepper/steg-endret';
-import type { SwitchTilstandEndretEvent } from './events/aksel/switch/tilstand-endret';
-import type { TabellRadValgtEvent } from './events/aksel/table/rad-valgt';
-import type { TabellSorteringEndretEvent } from './events/aksel/table/sortering-endret';
-import type { TabellFilterAnvendtEvent } from './events/aksel/table/filter-anvendt';
-import type { TabellRadUtvidetEvent } from './events/aksel/table/rad-utvidet';
-import type { TagFjernetEvent } from './events/aksel/tag/fjernet';
-import type { TekstKopiertEvent } from './events/aksel/copy-button/tekst-kopiert';
-import type { TextareaUtfyltEvent } from './events/aksel/textarea/utfylt';
-import type { TekstfeltUtfyltEvent } from './events/aksel/textfield/tekstfelt-utfylt';
-import type { TooltipLukketEvent } from './events/aksel/tooltip/lukket';
-import type { TooltipVistEvent } from './events/aksel/tooltip/vist';
+import type { FaneByttetProperties } from './events/aksel/tabs/fane-byttet';
 import type { ToggleGroupValgtEvent } from './events/aksel/togglegroup/valgt';
+import type { ToggleGroupValgtProperties } from './events/aksel/togglegroup/valgt';
+import type { FilFjernetEvent } from './events/aksel/file-upload/fil-fjernet';
+import type { FilFjernetProperties } from './events/aksel/file-upload/fil-fjernet';
+import type { FilLastetOppEvent } from './events/aksel/file-upload/fil-lastet-opp';
+import type { FilLastetOppProperties } from './events/aksel/file-upload/fil-lastet-opp';
+import type { FiltervalgEvent } from './events/filtervalg/filtervalg';
+import type { FiltervalgProperties } from './events/filtervalg/filtervalg';
+import type { FormProgressStegVistEvent } from './events/aksel/formprogress/steg-vist';
+import type { FormProgressStegVistProperties } from './events/aksel/formprogress/steg-vist';
+import type { FormProgressStegKlikketEvent } from './events/aksel/formprogress/steg-klikket';
+import type { FormProgressStegKlikketProperties } from './events/aksel/formprogress/steg-klikket';
+import type { FormSummaryVistEvent } from './events/aksel/formsummary/vist';
+import type { FormSummaryVistProperties } from './events/aksel/formsummary/vist';
+import type { FormSummaryFeltRedigertEvent } from './events/aksel/formsummary/felt-redigert';
+import type { FormSummaryFeltRedigertProperties } from './events/aksel/formsummary/felt-redigert';
+import type { GuidepanelVistEvent } from './events/aksel/guidepanel/vist';
+import type { GuidepanelVistProperties } from './events/aksel/guidepanel/vist';
+import type { HelpTextLukketEvent } from './events/aksel/helptext/lukket';
+import type { HelpTextLukketProperties } from './events/aksel/helptext/lukket';
+import type { HelpTextVistEvent } from './events/aksel/helptext/vist';
+import type { HelpTextVistProperties } from './events/aksel/helptext/vist';
+import type { KnappKlikketEvent } from './events/aksel/button/knapp-klikket';
+import type { KnappKlikketProperties } from './events/aksel/button/knapp-klikket';
+import type { LinkKlikketEvent } from './events/aksel/link/klikket';
+import type { LinkKlikketProperties } from './events/aksel/link/klikket';
+import type { LinkCardKlikketEvent } from './events/aksel/link-card/klikket';
+import type { LinkCardKlikketProperties } from './events/aksel/link-card/klikket';
+import type { LastNedEvent } from './events/last-ned/last-ned';
+import type { LastNedProperties } from './events/last-ned/last-ned';
+import type { PagineringSideValgtEvent } from './events/aksel/pagination/side-valgt';
+import type { PagineringSideValgtProperties } from './events/aksel/pagination/side-valgt';
+import type { PagineringStorrelseEndretEvent } from './events/aksel/pagination/storrelse-endret';
+import type { PagineringStorrelseEndretProperties } from './events/aksel/pagination/storrelse-endret';
+import type { PopoverApnetEvent } from './events/aksel/popover/apnet';
+import type { PopoverApnetProperties } from './events/aksel/popover/apnet';
+import type { PopoverLukketEvent } from './events/aksel/popover/lukket';
+import type { PopoverLukketProperties } from './events/aksel/popover/lukket';
+import type { LesMerApnetEvent } from './events/aksel/read-more/apnet';
+import type { LesMerApnetProperties } from './events/aksel/read-more/apnet';
+import type { LesMerLukketEvent } from './events/aksel/read-more/lukket';
+import type { LesMerLukketProperties } from './events/aksel/read-more/lukket';
+import type { ModalApnetEvent } from './events/aksel/modal/apnet';
+import type { ModalApnetProperties } from './events/aksel/modal/apnet';
+import type { ModalLukketEvent } from './events/aksel/modal/lukket';
+import type { ModalLukketProperties } from './events/aksel/modal/lukket';
+import type { MonthPickerManedValgtEvent } from './events/aksel/monthpicker/maned-valgt';
+import type { MonthPickerManedValgtProperties } from './events/aksel/monthpicker/maned-valgt';
+import type { NavigereEvent } from './events/navigere/navigere';
+import type { NavigereProperties } from './events/navigere/navigere';
+import type { NedtrekkslisteValgEndretEvent } from './events/aksel/select/nedtrekksliste-valg-endret';
+import type { NedtrekkslisteValgEndretProperties } from './events/aksel/select/nedtrekksliste-valg-endret';
+import type { RadioValgEndretEvent } from './events/aksel/radio/valg-endret';
+import type { RadioValgEndretProperties } from './events/aksel/radio/valg-endret';
+import type { TabellRadValgtEvent } from './events/aksel/table/rad-valgt';
+import type { TabellRadValgtProperties } from './events/aksel/table/rad-valgt';
+import type { TabellSorteringEndretEvent } from './events/aksel/table/sortering-endret';
+import type { TabellSorteringEndretProperties } from './events/aksel/table/sortering-endret';
+import type { TabellFilterAnvendtEvent } from './events/aksel/table/filter-anvendt';
+import type { TabellFilterAnvendtProperties } from './events/aksel/table/filter-anvendt';
+import type { TabellRadUtvidetEvent } from './events/aksel/table/rad-utvidet';
+import type { TabellRadUtvidetProperties } from './events/aksel/table/rad-utvidet';
+import type { StepperStegEndretEvent } from './events/aksel/stepper/steg-endret';
+import type { StepperStegEndretProperties } from './events/aksel/stepper/steg-endret';
+import type { SkjemaApnetEvent } from './events/skjema/apnet';
+import type { SkjemaApnetProperties } from './events/skjema/apnet';
+import type { SkjemaFullfortEvent } from './events/skjema/fullfort';
+import type { SkjemaFullfortProperties } from './events/skjema/fullfort';
+import type { SkjemaInnsendingFeiletEvent } from './events/skjema/innsending-feilet';
+import type { SkjemaInnsendingFeiletProperties } from './events/skjema/innsending-feilet';
+import type { SkjemaSporsmalBesvartEvent } from './events/skjema/sporsmal-besvart';
+import type { SkjemaSporsmalBesvartProperties } from './events/skjema/sporsmal-besvart';
+import type { SkjemaStartetEvent } from './events/skjema/startet';
+import type { SkjemaStartetProperties } from './events/skjema/startet';
+import type { SkjemaStegFullfortEvent } from './events/skjema/steg-fullfort';
+import type { SkjemaStegFullfortProperties } from './events/skjema/steg-fullfort';
+import type { SkjemaValideringFeiletEvent } from './events/skjema/validering-feilet';
+import type { SkjemaValideringFeiletProperties } from './events/skjema/validering-feilet';
+import type { SokEvent } from './events/aksel/search/sok';
+import type { SokProperties } from './events/aksel/search/sok';
+import type { SokeforslagValgtEvent } from './events/aksel/search/sokeforslag-valgt';
+import type { SokeforslagValgtProperties } from './events/aksel/search/sokeforslag-valgt';
+import type { SwitchTilstandEndretEvent } from './events/aksel/switch/tilstand-endret';
+import type { SwitchTilstandEndretProperties } from './events/aksel/switch/tilstand-endret';
+import type { TagFjernetEvent } from './events/aksel/tag/fjernet';
+import type { TagFjernetProperties } from './events/aksel/tag/fjernet';
+import type { TekstKopiertEvent } from './events/aksel/copy-button/tekst-kopiert';
+import type { TekstKopiertProperties } from './events/aksel/copy-button/tekst-kopiert';
+import type { TextareaUtfyltEvent } from './events/aksel/textarea/utfylt';
+import type { TextareaUtfyltProperties } from './events/aksel/textarea/utfylt';
+import type { TekstfeltUtfyltEvent } from './events/aksel/textfield/tekstfelt-utfylt';
+import type { TekstfeltUtfyltProperties } from './events/aksel/textfield/tekstfelt-utfylt';
+import type { TooltipLukketEvent } from './events/aksel/tooltip/lukket';
+import type { TooltipLukketProperties } from './events/aksel/tooltip/lukket';
+import type { TooltipVistEvent } from './events/aksel/tooltip/vist';
+import type { TooltipVistProperties } from './events/aksel/tooltip/vist';
 import type { UtvidbartKortApnetEvent } from './events/aksel/expansion-card/utvidbart-kort-apnet';
+import type { UtvidbartKortApnetProperties } from './events/aksel/expansion-card/utvidbart-kort-apnet';
 import type { UtvidbartKortLukketEvent } from './events/aksel/expansion-card/utvidbart-kort-lukket';
+import type { UtvidbartKortLukketProperties } from './events/aksel/expansion-card/utvidbart-kort-lukket';
 
-/**
- * Alle hendelsesnavn.
- * Bruk for enkel gjenfinning og autofullføring i applikasjoner.
- */
 export const Events = {
   /** Accordion åpnet */
   ACCORDION_APNET: ACCORDION_APNET_EVENT,
@@ -397,106 +470,105 @@ export const Events = {
   /** Utvidbart kort lukket */
   UTVIDBART_KORT_LUKKET: UTVIDBART_KORT_LUKKET_EVENT,
 } as const;
-
 /**
  * Union-type for alle gyldige hendelsesnavn.
  */
 export type EventName = typeof Events[keyof typeof Events];
 
 /**
+ * Mapping fra hendelsesnavn til properties-interface.
+ */
+export type EventPropertiesMap = {
+  [ACCORDION_APNET_EVENT]: AccordionApnetProperties;
+  [ACCORDION_LUKKET_EVENT]: AccordionLukketProperties;
+  [ACTIONMENU_APNET_EVENT]: ActionMenuApnetProperties;
+  [ACTIONMENU_LUKKET_EVENT]: ActionMenuLukketProperties;
+  [ACTIONMENU_UNDERMENY_APNET_EVENT]: ActionMenuUndermenyApnetProperties;
+  [ACTIONMENU_UNDERMENY_LUKKET_EVENT]: ActionMenuUndermenyLukketProperties;
+  [ACTIONMENU_VALG_VALGT_EVENT]: ActionMenuValgValgtProperties;
+  [ALERT_LUKKET_EVENT]: AlertLukketProperties;
+  [ALERT_VIST_EVENT]: AlertVistProperties;
+  [KNAPP_KLIKKET_EVENT]: KnappKlikketProperties;
+  [AVKRYSNINGSBOKS_ENDRET_EVENT]: AvkrysningsboksEndretProperties;
+  [CHIP_FJERNET_EVENT]: ChipFjernetProperties;
+  [CHIP_TOGGLED_EVENT]: ChipToggledProperties;
+  [COMBOBOX_OPTION_TOGGLED_EVENT]: ComboboxOptionToggledProperties;
+  [TEKST_KOPIERT_EVENT]: TekstKopiertProperties;
+  [DATO_VALGT_EVENT]: DatoValgtProperties;
+  [ERROR_SUMMARY_FEILMELDING_KLIKKET_EVENT]: ErrorSummaryFeilmeldingKlikketProperties;
+  [ERROR_SUMMARY_VIST_EVENT]: ErrorSummaryVistProperties;
+  [UTVIDBART_KORT_APNET_EVENT]: UtvidbartKortApnetProperties;
+  [UTVIDBART_KORT_LUKKET_EVENT]: UtvidbartKortLukketProperties;
+  [FIL_FJERNET_EVENT]: FilFjernetProperties;
+  [FIL_LASTET_OPP_EVENT]: FilLastetOppProperties;
+  [FORMPROGRESS_STEG_KLIKKET_EVENT]: FormProgressStegKlikketProperties;
+  [FORMPROGRESS_STEG_VIST_EVENT]: FormProgressStegVistProperties;
+  [FORMSUMMARY_FELT_REDIGERT_EVENT]: FormSummaryFeltRedigertProperties;
+  [FORMSUMMARY_VIST_EVENT]: FormSummaryVistProperties;
+  [GLOBALALERT_LUKKET_EVENT]: GlobalAlertLukketProperties;
+  [GLOBALALERT_VIST_EVENT]: GlobalAlertVistProperties;
+  [GUIDEPANEL_VIST_EVENT]: GuidepanelVistProperties;
+  [HELPTEXT_LUKKET_EVENT]: HelpTextLukketProperties;
+  [HELPTEXT_VIST_EVENT]: HelpTextVistProperties;
+  [INFOCARD_VIST_EVENT]: InfoCardVistProperties;
+  [INLINEMESSAGE_VIST_EVENT]: InlineMessageVistProperties;
+  [LINKCARD_KLIKKET_EVENT]: LinkCardKlikketProperties;
+  [LINK_KLIKKET_EVENT]: LinkKlikketProperties;
+  [LOCALALERT_LUKKET_EVENT]: LocalAlertLukketProperties;
+  [LOCALALERT_VIST_EVENT]: LocalAlertVistProperties;
+  [MODAL_APNET_EVENT]: ModalApnetProperties;
+  [MODAL_LUKKET_EVENT]: ModalLukketProperties;
+  [MONTHPICKER_MANED_VALGT_EVENT]: MonthPickerManedValgtProperties;
+  [PAGINERING_SIDE_VALGT_EVENT]: PagineringSideValgtProperties;
+  [PAGINERING_STORRELSE_ENDRET_EVENT]: PagineringStorrelseEndretProperties;
+  [POPOVER_APNET_EVENT]: PopoverApnetProperties;
+  [POPOVER_LUKKET_EVENT]: PopoverLukketProperties;
+  [PROCESS_STEG_KLIKKET_EVENT]: ProcessStegKlikketProperties;
+  [PROCESS_VIST_EVENT]: ProcessVistProperties;
+  [RADIO_VALG_ENDRET_EVENT]: RadioValgEndretProperties;
+  [LES_MER_APNET_EVENT]: LesMerApnetProperties;
+  [LES_MER_LUKKET_EVENT]: LesMerLukketProperties;
+  [SOK_EVENT]: SokProperties;
+  [SOKEFORSLAG_VALGT_EVENT]: SokeforslagValgtProperties;
+  [NEDTREKKSLISTE_VALG_ENDRET_EVENT]: NedtrekkslisteValgEndretProperties;
+  [STEPPER_STEG_ENDRET_EVENT]: StepperStegEndretProperties;
+  [SWITCH_TILSTAND_ENDRET_EVENT]: SwitchTilstandEndretProperties;
+  [TABELL_FILTER_ANVENDT_EVENT]: TabellFilterAnvendtProperties;
+  [TABELL_RAD_UTVIDET_EVENT]: TabellRadUtvidetProperties;
+  [TABELL_RAD_VALGT_EVENT]: TabellRadValgtProperties;
+  [TABELL_SORTERING_ENDRET_EVENT]: TabellSorteringEndretProperties;
+  [FANE_BYTTET_EVENT]: FaneByttetProperties;
+  [TAG_FJERNET_EVENT]: TagFjernetProperties;
+  [TEXTAREA_UTFYLT_EVENT]: TextareaUtfyltProperties;
+  [TEKSTFELT_UTFYLT_EVENT]: TekstfeltUtfyltProperties;
+  [TOGGLEGROUP_VALGT_EVENT]: ToggleGroupValgtProperties;
+  [TOOLTIP_LUKKET_EVENT]: TooltipLukketProperties;
+  [TOOLTIP_VIST_EVENT]: TooltipVistProperties;
+  [BESOK_EVENT]: BesokProperties;
+  [FILTERVALG_EVENT]: FiltervalgProperties;
+  [LAST_NED_EVENT]: LastNedProperties;
+  [NAVIGERE_EVENT]: NavigereProperties;
+  [SKJEMA_APNET_EVENT]: SkjemaApnetProperties;
+  [SKJEMA_FULLFORT_EVENT]: SkjemaFullfortProperties;
+  [SKJEMA_INNSENDING_FEILET_EVENT]: SkjemaInnsendingFeiletProperties;
+  [SKJEMA_SPORSMAL_BESVART_EVENT]: SkjemaSporsmalBesvartProperties;
+  [SKJEMA_STARTET_EVENT]: SkjemaStartetProperties;
+  [SKJEMA_STEG_FULLFORT_EVENT]: SkjemaStegFullfortProperties;
+  [SKJEMA_VALIDERING_FEILET_EVENT]: SkjemaValideringFeiletProperties;
+};
+
+/**
  * Union-type for alle hendelser (navn + properties).
  * Nyttig når man lager egne, typesikre wrapper-funksjoner.
  */
-export type TaxonomyEvent =
-  | AccordionApnetEvent
-  | AccordionLukketEvent
-  | ActionMenuApnetEvent
-  | ActionMenuLukketEvent
-  | ActionMenuValgValgtEvent
-  | ActionMenuUndermenyApnetEvent
-  | ActionMenuUndermenyLukketEvent
-  | GlobalAlertVistEvent
-  | GlobalAlertLukketEvent
-  | LocalAlertVistEvent
-  | LocalAlertLukketEvent
-  | InlineMessageVistEvent
-  | InfoCardVistEvent
-  | ProcessVistEvent
-  | ProcessStegKlikketEvent
-  | GlobalAlertVistEvent
-  | GlobalAlertLukketEvent
-  | LocalAlertVistEvent
-  | LocalAlertLukketEvent
-  | InlineMessageVistEvent
-  | InfoCardVistEvent
-  | ProcessVistEvent
-  | ProcessStegKlikketEvent
-  | AlertLukketEvent
-  | AlertVistEvent
-  | AvkrysningsboksEndretEvent
-  | BesokEvent
-  | ChipFjernetEvent
-  | ChipToggledEvent
-  | ComboboxOptionToggledEvent
-  | DatoValgtEvent
-  | ErrorSummaryFeilmeldingKlikketEvent
-  | ErrorSummaryVistEvent
-  | FaneByttetEvent
-  | FilFjernetEvent
-  | FilLastetOppEvent
-  | FiltervalgEvent
-  | FormProgressStegKlikketEvent
-  | FormProgressStegVistEvent
-  | FormSummaryFeltRedigertEvent
-  | FormSummaryVistEvent
-  | GuidepanelVistEvent
-  | HelpTextVistEvent
-  | HelpTextLukketEvent
-  | KnappKlikketEvent
-  | LinkCardKlikketEvent
-  | LinkKlikketEvent
-  | LastNedEvent
-  | PagineringSideValgtEvent
-  | PagineringStorrelseEndretEvent
-  | LesMerApnetEvent
-  | LesMerLukketEvent
-  | ModalApnetEvent
-  | ModalLukketEvent
-  | MonthPickerManedValgtEvent
-  | NavigereEvent
-  | NedtrekkslisteValgEndretEvent
-  | PopoverApnetEvent
-  | PopoverLukketEvent
-  | RadioValgEndretEvent
-  | SkjemaApnetEvent
-  | SkjemaFullfortEvent
-  | SkjemaInnsendingFeiletEvent
-  | SkjemaSporsmalBesvartEvent
-  | SkjemaStartetEvent
-  | SkjemaStegFullfortEvent
-  | StepperStegEndretEvent
-  | SkjemaValideringFeiletEvent
-  | SokEvent
-  | SokeforslagValgtEvent
-  | SwitchTilstandEndretEvent
-  | TabellFilterAnvendtEvent
-  | TabellRadUtvidetEvent
-  | TabellSorteringEndretEvent
-  | TabellRadValgtEvent
-  | TagFjernetEvent
-  | TekstKopiertEvent
-  | TextareaUtfyltEvent
-  | TekstfeltUtfyltEvent
-  | TooltipVistEvent
-  | TooltipLukketEvent
-  | ToggleGroupValgtEvent
-  | UtvidbartKortApnetEvent
-  | UtvidbartKortLukketEvent;
+export type TaxonomyEvent = {
+  [K in keyof EventPropertiesMap]: { name: K; properties: EventPropertiesMap[K] }
+}[keyof EventPropertiesMap];
 
 /**
  * Hjelpetype for å hente property-typene basert på hendelsesnavn.
  */
-export type PropertiesFor<T extends EventName> = Extract<TaxonomyEvent, { name: T }>['properties'];
+export type PropertiesFor<T extends EventName> = EventPropertiesMap[T];
 
 /**
  * Type-guard som bekrefter at et navn er en gyldig hendelse i taksonomien.

@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Knapp klikket - trigges når bruker klikker på en knapp
  */
 export const KNAPP_KLIKKET_EVENT = 'knapp klikket' as const;
 
-export interface KnappKlikketProperties {
-  /** Id til knappen */
-  komponentId?: string;
+export interface KnappKlikketProperties extends BaseProperties {
   /** Teksten som vises på knappen */
   tekst: string;
   /** Variant av knappen */

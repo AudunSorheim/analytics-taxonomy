@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Chip toggled - trigges når bruker klikker på en Chips.Toggle
  */
 export const CHIP_TOGGLED_EVENT = 'chip toggled' as const;
 
-export interface ChipToggledProperties {
+export interface ChipToggledProperties extends BaseProperties {
   /** Tekstinnholdet i chipen */
   tekst?: string;
   /** Verdien som chipen representerer */

@@ -1,13 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * Table filter anvendt - trigges når bruker anvender et filter på tabellen
  */
 export const TABELL_FILTER_ANVENDT_EVENT = 'tabell filter anvendt' as const;
 
-export interface TabellFilterAnvendtProperties {
-  /** Id eller referanse til tabellen */
-  komponentId?: string;
+export interface TabellFilterAnvendtProperties extends BaseProperties {
   /** Hvilken kolonne som filtreres */
-  kolonneId?: string;
   /** Kolonnenavn */
   kolonneNavn?: string;
   /** Filterverdi(er) */

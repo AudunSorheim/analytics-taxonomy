@@ -1,13 +1,12 @@
+import type { BaseProperties } from '../types';
 /**
  * Skjema åpnet-hendelse - trigges når et skjema åpnes
  */
 export const SKJEMA_APNET_EVENT = 'skjema åpnet' as const;
 
-export interface SkjemaApnetProperties {
+export interface SkjemaApnetProperties extends BaseProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unik identifikator for skjemaet */
-  skjemaId: string;
 }
 
 export type SkjemaApnetEvent = {

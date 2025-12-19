@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * LinkCard klikket - trigges når brukeren aktiverer et LinkCard
  */
 export const LINKCARD_KLIKKET_EVENT = 'linkcard klikket' as const;
 
-export interface LinkCardKlikketProperties {
-  /** Id eller referanse til kortet */
-  komponentId?: string;
+export interface LinkCardKlikketProperties extends BaseProperties {
   /** Overskriften som vises i kortet */
   tittel: string;
   /** Destinasjon/lenke kortet peker til */

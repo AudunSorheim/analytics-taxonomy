@@ -1,11 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * Paginering side valgt - trigges når bruker navigerer til en ny side
  */
 export const PAGINERING_SIDE_VALGT_EVENT = 'paginering side valgt' as const;
 
-export interface PagineringSideValgtProperties {
+export interface PagineringSideValgtProperties extends BaseProperties {
   /** Id eller plassering til pagineringen */
-  komponentId?: string;
   /** Siden som ble valgt (1-index) */
   side: number;
   /** Forrige side før endringen */

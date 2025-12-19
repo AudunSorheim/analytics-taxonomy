@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * GlobalAlert lukket-hendelse - trigges når et globalt varsel lukkes
  */
 export const GLOBALALERT_LUKKET_EVENT = 'globalalert lukket' as const;
 
-export interface GlobalAlertLukketProperties {
+export interface GlobalAlertLukketProperties extends BaseProperties {
   /** Status/variant av varselet */
   status?: 'announcement' | 'success' | 'warning' | 'error';
   /** Tittel på varselet */

@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * InfoCard vist-hendelse - trigges når et infokort vises
  */
 export const INFOCARD_VIST_EVENT = 'infocard vist' as const;
 
-export interface InfoCardVistProperties {
+export interface InfoCardVistProperties extends BaseProperties {
   /** Tittel på kortet */
   tittel?: string;
   /** Tekstinnholdet i kortet */

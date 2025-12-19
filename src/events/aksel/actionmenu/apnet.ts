@@ -1,3 +1,4 @@
+import type { BaseProperties } from '../../types';
 import type { ActionMenuInteraksjonsMetode, ActionMenuSti } from './types';
 
 /**
@@ -5,9 +6,8 @@ import type { ActionMenuInteraksjonsMetode, ActionMenuSti } from './types';
  */
 export const ACTIONMENU_APNET_EVENT = 'actionmenu åpnet' as const;
 
-export interface ActionMenuApnetProperties {
+export interface ActionMenuApnetProperties extends BaseProperties {
   /** Id eller annen referanse til menyen */
-  komponentId?: string;
   /** Teksten på knappen eller triggeren */
   triggerTekst: string;
   /** Hva som førte til åpningen (klikk, tastatur, programmatisk) */

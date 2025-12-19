@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Process vist-hendelse - trigges når en prosess vises
  */
 export const PROCESS_VIST_EVENT = 'process vist' as const;
 
-export interface ProcessVistProperties {
+export interface ProcessVistProperties extends BaseProperties {
   /** Antall steg i prosessen */
   antallSteg?: number;
   /** Om prosessen er trunkert (start, end, both) */

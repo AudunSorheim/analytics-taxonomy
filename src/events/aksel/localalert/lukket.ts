@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * LocalAlert lukket-hendelse - trigges når et lokalt varsel lukkes
  */
 export const LOCALALERT_LUKKET_EVENT = 'localalert lukket' as const;
 
-export interface LocalAlertLukketProperties {
+export interface LocalAlertLukketProperties extends BaseProperties {
   /** Status/variant av varselet */
   status?: 'announcement' | 'success' | 'warning' | 'error';
   /** Tittel på varselet */

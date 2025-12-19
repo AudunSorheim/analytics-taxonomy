@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Alert vist-hendelse - trigges når et varsel vises
  */
 export const ALERT_VIST_EVENT = 'alert vist' as const;
 
-export interface AlertVistProperties {
+export interface AlertVistProperties extends BaseProperties {
   /** Variant av varselet */
   variant?: 'error' | 'warning' | 'info' | 'success';
   /** Tekstinnholdet i varselet */

@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../types';
 /**
  * Besøk-hendelse - trigges ved sidebesøk
  */
 export const BESOK_EVENT = 'besøk' as const;
 
-export interface BesokProperties {
+export interface BesokProperties extends BaseProperties {
   /** Adresse (URL) til siden som ble besøkt */
   url?: string;
   /** Tittelen på siden som ble besøkt */

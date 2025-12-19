@@ -1,3 +1,4 @@
+import type { BaseProperties } from '../../types';
 import type {
   ActionMenuInteraksjonsMetode,
   ActionMenuLukkAarsak,
@@ -9,11 +10,9 @@ import type {
  */
 export const ACTIONMENU_LUKKET_EVENT = 'actionmenu lukket' as const;
 
-export interface ActionMenuLukketProperties {
-  /** Id eller annen referanse til menyen */
-  komponentId?: string;
+export interface ActionMenuLukketProperties extends BaseProperties {
   /** Hvordan menyen ble lukket (valg, klikk utenfor, escape, etc.) */
-  lukkAarsak?: ActionMenuLukkAarsak;
+  lukkAarsak: ActionMenuLukkAarsak;
   /** Presis interaksjonsmetode (mus, tastatur, snarvei osv.) */
   interaksjonsMetode?: ActionMenuInteraksjonsMetode;
   /** Id til siste valg som førte til lukking (hvis relevant) */

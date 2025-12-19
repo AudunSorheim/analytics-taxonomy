@@ -1,13 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Table rad utvidet - trigges når en utvidbar rad ekspanderes
  */
 export const TABELL_RAD_UTVIDET_EVENT = 'tabell rad utvidet' as const;
 
-export interface TabellRadUtvidetProperties {
-  /** Id eller referanse til tabellen */
-  komponentId?: string;
-  /** ID på raden som utvides */
-  radId: string;
+export interface TabellRadUtvidetProperties extends BaseProperties {
   /** Radnummer (0-indeksert) */
   radIndeks?: number;
   /** Om raden ble utvidet (true) eller kollapset (false) */

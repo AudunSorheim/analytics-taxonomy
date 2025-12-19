@@ -1,11 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * Paginering størrelse endret - trigges når bruker oppdaterer antall elementer per side
  */
 export const PAGINERING_STORRELSE_ENDRET_EVENT = 'paginering størrelse endret' as const;
 
-export interface PagineringStorrelseEndretProperties {
+export interface PagineringStorrelseEndretProperties extends BaseProperties {
   /** Id eller plassering til pagineringen */
-  komponentId?: string;
   /** Ny størrelse (antall elementer per side) */
   nyStorrelse?: number;
   /** Tidligere størrelse */

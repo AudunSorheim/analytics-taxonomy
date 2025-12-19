@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Textarea utfylt - trigges når tekstområdet får eller mister verdi
  */
 export const TEXTAREA_UTFYLT_EVENT = 'textarea utfylt' as const;
 
-export interface TextareaUtfyltProperties {
-  /** Id til tekstområdet */
-  feltId?: string;
+export interface TextareaUtfyltProperties extends BaseProperties {
   /** Navnet eller labelen til feltet */
   feltNavn?: string;
   /** Om feltet inneholder tekst etter endringen */

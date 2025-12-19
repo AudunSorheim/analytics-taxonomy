@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * FormSummary felt redigert - trigges når bruker velger å redigere et felt fra oppsummeringen
  */
 export const FORMSUMMARY_FELT_REDIGERT_EVENT = 'formsummary felt redigert' as const;
 
-export interface FormSummaryFeltRedigertProperties {
+export interface FormSummaryFeltRedigertProperties extends BaseProperties {
   /** Id eller referanse til skjemaet */
   skjemaId?: string;
   /** ID på feltet som redigeres */

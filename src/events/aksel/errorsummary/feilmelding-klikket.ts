@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * ErrorSummary feilmelding klikket - trigges når bruker klikker på en feilmelding i oppsummeringen
  */
 export const ERROR_SUMMARY_FEILMELDING_KLIKKET_EVENT = 'error-summary feilmelding klikket' as const;
 
-export interface ErrorSummaryFeilmeldingKlikketProperties {
+export interface ErrorSummaryFeilmeldingKlikketProperties extends BaseProperties {
   /** Id eller referanse til skjemaet */
   skjemaId?: string;
   /** ID på feltet som feilen gjelder */

@@ -1,11 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * ToggleGroup valgt - trigges når bruker velger en toggle i gruppen
  */
 export const TOGGLEGROUP_VALGT_EVENT = 'togglegroup valgt' as const;
 
-export interface ToggleGroupValgtProperties {
+export interface ToggleGroupValgtProperties extends BaseProperties {
   /** Id eller navn på gruppen */
-  komponentId?: string;
   /** Verdien som ble valgt (value-prop) */
   valgtVerdi: string;
 }

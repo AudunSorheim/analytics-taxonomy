@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Stepper steg endret - trigges når bruker navigerer til et nytt steg
  */
 export const STEPPER_STEG_ENDRET_EVENT = 'stepper steg endret' as const;
 
-export interface StepperStegEndretProperties {
-  /** Id eller navn på stepperen */
-  komponentId?: string;
+export interface StepperStegEndretProperties extends BaseProperties {
   /** Steget det navigeres til */
   stegId?: string;
   /** 0-indeksert posisjon for steget */

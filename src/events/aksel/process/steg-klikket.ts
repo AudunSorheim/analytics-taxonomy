@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Process steg klikket-hendelse - trigges når bruker klikker på et steg i prosessen (hvis interaktivt)
  */
 export const PROCESS_STEG_KLIKKET_EVENT = 'process steg klikket' as const;
 
-export interface ProcessStegKlikketProperties {
+export interface ProcessStegKlikketProperties extends BaseProperties {
   /** Tittel på steget */
   tittel?: string;
   /** Status på steget */

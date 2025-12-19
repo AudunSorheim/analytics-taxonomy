@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * FormSummary vist - trigges når oppsummeringen av skjemadata vises
  */
 export const FORMSUMMARY_VIST_EVENT = 'formsummary vist' as const;
 
-export interface FormSummaryVistProperties {
+export interface FormSummaryVistProperties extends BaseProperties {
   /** Id eller referanse til skjemaet */
   skjemaId?: string;
   /** Antall felt i oppsummeringen */
@@ -11,7 +12,6 @@ export interface FormSummaryVistProperties {
   /** Om oppsummeringen er redigerbar */
   erRedigerbar?: boolean;
   /** Kontekst (innsending, forhåndsvisning) */
-  kontekst?: string;
 }
 
 export type FormSummaryVistEvent = {

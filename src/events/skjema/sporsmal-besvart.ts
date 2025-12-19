@@ -1,13 +1,12 @@
+import type { BaseProperties } from '../types';
 /**
  * Skjema spørsmål besvart-hendelse - trigges når et spørsmål i skjemaet besvares
  */
 export const SKJEMA_SPORSMAL_BESVART_EVENT = 'skjema spørsmål besvart' as const;
 
-export interface SkjemaSporsmalBesvartProperties {
+export interface SkjemaSporsmalBesvartProperties extends BaseProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unik identifikator for skjemaet */
-  skjemaId: string;
   /** Spørsmålet som ble besvart */
   spørsmål?: string;
   /** Svaret som ble gitt */

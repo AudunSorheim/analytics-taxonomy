@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../types';
 /**
  * Last ned-hendelse - trigges når en bruker laster ned en fil
  */
 export const LAST_NED_EVENT = 'last ned' as const;
 
-export interface LastNedProperties {
+export interface LastNedProperties extends BaseProperties {
   /** Filtype (for eksempel PDF eller Excel) */
   type?: string;
   /** Tema eller kategori for nedlastingen */

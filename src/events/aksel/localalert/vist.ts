@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * LocalAlert vist-hendelse - trigges når et lokalt varsel vises
  */
 export const LOCALALERT_VIST_EVENT = 'localalert vist' as const;
 
-export interface LocalAlertVistProperties {
+export interface LocalAlertVistProperties extends BaseProperties {
   /** Status/variant av varselet */
   status?: 'announcement' | 'success' | 'warning' | 'error';
   /** Tittel på varselet */

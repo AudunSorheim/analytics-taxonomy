@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Modal lukket-hendelse - trigges når en modal lukkes
  */
 export const MODAL_LUKKET_EVENT = 'modal lukket' as const;
 
-export interface ModalLukketProperties {
-  /** ID for modal-dialogen */
-  modalId?: string;
+export interface ModalLukketProperties extends BaseProperties {
   /** Tittelen på modal-dialogen */
   tittel?: string;
   /** Hvordan dialogen ble lukket */

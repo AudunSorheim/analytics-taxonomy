@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * FormProgress steg klikket - trigges når bruker klikker på et steg i FormProgress
  */
 export const FORMPROGRESS_STEG_KLIKKET_EVENT = 'formprogress steg klikket' as const;
 
-export interface FormProgressStegKlikketProperties {
+export interface FormProgressStegKlikketProperties extends BaseProperties {
   /** Id eller referanse til skjemaet */
   skjemaId?: string;
   /** Nummer på steg som ble klikket (1-indeksert) */

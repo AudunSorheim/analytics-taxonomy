@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Dato valgt - trigges når bruker velger en dato
  */
 export const DATO_VALGT_EVENT = 'dato valgt' as const;
 
-export interface DatoValgtProperties {
+export interface DatoValgtProperties extends BaseProperties {
   /** Verdien brukeren valgte - enkel dato, array av datoer, eller range */
   datoVerdi?: string | string[];
   /** Feltet eller konteksten datoen tilhører */

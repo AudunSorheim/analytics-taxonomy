@@ -1,11 +1,11 @@
+import type { BaseProperties } from '../../types';
 /**
  * MonthPicker måned valgt - trigges når bruker velger en ny måned
  */
 export const MONTHPICKER_MANED_VALGT_EVENT = 'monthpicker måned valgt' as const;
 
-export interface MonthPickerManedValgtProperties {
+export interface MonthPickerManedValgtProperties extends BaseProperties {
   /** Id eller navn på monthpicker-komponenten */
-  komponentId?: string;
   /** ISO-representasjon av måneden (YYYY-MM) */
   maned: string;
   /** Tidligere valgt måned */

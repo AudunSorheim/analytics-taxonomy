@@ -1,3 +1,4 @@
+import type { BaseProperties } from '../../types';
 import type {
   ActionMenuInteraksjonsMetode,
   ActionMenuLukkAarsak,
@@ -9,9 +10,8 @@ import type {
  */
 export const ACTIONMENU_UNDERMENY_LUKKET_EVENT = 'actionmenu undermeny lukket' as const;
 
-export interface ActionMenuUndermenyLukketProperties {
+export interface ActionMenuUndermenyLukketProperties extends BaseProperties {
   /** Id eller annen referanse til hovedmenyen */
-  komponentId?: string;
   /** Sti fra hovedmeny til denne undermenyen */
   sti?: ActionMenuSti;
   /** Navnet på subtriggeren */

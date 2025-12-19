@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Radio valg endret - trigges når bruker velger et nytt alternativ
  */
 export const RADIO_VALG_ENDRET_EVENT = 'radio valg endret' as const;
 
-export interface RadioValgEndretProperties {
-  /** Id for radiogruppen */
-  gruppeId?: string;
+export interface RadioValgEndretProperties extends BaseProperties {
   /** Verdien som ble valgt */
   valgtAlternativ?: string;
   /** Verdien som var valgt fra før */

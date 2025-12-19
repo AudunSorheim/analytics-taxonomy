@@ -1,13 +1,12 @@
+import type { BaseProperties } from '../types';
 /**
  * Skjema innsending feilet-hendelse - trigges når innsending av skjema feiler
  */
 export const SKJEMA_INNSENDING_FEILET_EVENT = 'skjema innsending feilet' as const;
 
-export interface SkjemaInnsendingFeiletProperties {
+export interface SkjemaInnsendingFeiletProperties extends BaseProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unik identifikator for skjemaet */
-  skjemaId: string;
 }
 
 export type SkjemaInnsendingFeiletEvent = {

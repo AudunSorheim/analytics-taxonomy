@@ -1,11 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Utvidbart kort lukket - trigges når kortet lukkes
  */
 export const UTVIDBART_KORT_LUKKET_EVENT = 'utvidbart kort lukket' as const;
 
-export interface UtvidbartKortLukketProperties {
-  /** Identifikator for kortet */
-  kortId?: string;
+export interface UtvidbartKortLukketProperties extends BaseProperties {
   /** Tittel på kortet */
   tittel: string;
 }

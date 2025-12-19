@@ -1,9 +1,10 @@
+import type { BaseProperties } from '../../types';
 /**
  * Søk gjennomført - trigges når bruker gjør ferdig et søk
  */
 export const SOK_EVENT = 'søk gjennomført' as const;
 
-export interface SokProperties {
+export interface SokProperties extends BaseProperties {
   /** Tekst/identifikator for søkekomponenten */
   tekst?: string;
   /** Antall treff som søket ga */

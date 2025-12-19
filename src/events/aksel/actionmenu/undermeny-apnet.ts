@@ -1,3 +1,4 @@
+import type { BaseProperties } from '../../types';
 import type { ActionMenuInteraksjonsMetode, ActionMenuSti } from './types';
 
 /**
@@ -6,9 +7,7 @@ import type { ActionMenuInteraksjonsMetode, ActionMenuSti } from './types';
  */
 export const ACTIONMENU_UNDERMENY_APNET_EVENT = 'actionmenu undermeny åpnet' as const;
 
-export interface ActionMenuUndermenyApnetProperties {
-  /** Id eller annen referanse til hovedmenyen */
-  komponentId?: string;
+export interface ActionMenuUndermenyApnetProperties extends BaseProperties {
   /** Sti fra hovedmeny til denne undermenyen */
   sti?: ActionMenuSti;
   /** Navnet på subtriggeren */

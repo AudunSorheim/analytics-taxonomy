@@ -1,13 +1,12 @@
+import type { BaseProperties } from '../types';
 /**
  * Skjema startet-hendelse - trigges når en bruker begynner på et skjema
  */
 export const SKJEMA_STARTET_EVENT = 'skjema startet' as const;
 
-export interface SkjemaStartetProperties {
+export interface SkjemaStartetProperties extends BaseProperties {
   /** Navn på skjemaet */
   skjemanavn?: string;
-  /** Unik identifikator for skjemaet */
-  skjemaId: string;
 }
 
 export type SkjemaStartetEvent = {
