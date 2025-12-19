@@ -2,6 +2,12 @@
 
 Hold denne filen oppdatert for hver utgivelse. Samle endringer per versjon og beskriv dem kort.
 
+## 0.0.6
+
+- **Bugfix**: `TaxonomyEvent` er nå en generic type (`TaxonomyEvent<Name>`). Dette løser problemer med autocomplete i IDE-er (IntelliJ/VS Code) når man lager wrapper-funksjoner.
+- **Nytt**: La til `AmplitudeEvents` alias for `EventPropertiesMap`.
+- **Dokumentasjon**: Oppdatert README med eksempel på generic logge-funksjon.
+
 ## 0.0.5
 
 - **Refaktorering**: `BaseProperties` er nå tilgjengelig på alle eventer.
